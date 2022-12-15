@@ -392,9 +392,47 @@
    
    </style>
     
-   <embed src="song.mp3" width="0" autostart="true" ></embed>
+    <center><button id="button" style="color:white; font-family:'Courier New', Courier, monospace; border: none;background: none;" onclick="playAudio();document.getElementById('button').hidden=true;document.getElementById('site').hidden=false"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>enter killa group</button></center>
 
-   
+    <script>
+      document.onkeydown = function(e) {
+      if(event.keyCode == 123) {
+          return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+          return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+          return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+          return false;
+      }
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+          return false;
+      }
+      }
+      document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      });
+      document.getElementById('site').hidden=true
+      function playAudio() {
+          myAudio = new Audio('song.mp3'); 
+          if (typeof myAudio.loop == 'boolean')
+          {
+              myAudio.loop = true;
+          }
+          else
+          {
+              myAudio.addEventListener('ended', function() {
+                  this.currentTime = 0;
+                  this.play();
+              }, false);
+          }
+          myAudio.play();
+      }
+    </script>
+    
    
    <body onload="document.body.style.opacity='1'">
    <div class="center">
@@ -474,48 +512,6 @@
         ★
       </div>
     </div>
-    
-
-    <center><button id="button" style="color:white; font-family:'Courier New', Courier, monospace; border: none;background: none;" onclick="playAudio();document.getElementById('button').hidden=true;document.getElementById('site').hidden=false"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>enter killa group</button></center>
-
-    <script>
-      document.onkeydown = function(e) {
-      if(event.keyCode == 123) {
-          return false;
-      }
-      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-          return false;
-      }
-      if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-          return false;
-      }
-      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-          return false;
-      }
-      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-          return false;
-      }
-      }
-      document.addEventListener('contextmenu', function(e) {
-      e.preventDefault();
-      });
-      document.getElementById('site').hidden=true
-      function playAudio() {
-          myAudio = new Audio('song.mp3'); 
-          if (typeof myAudio.loop == 'boolean')
-          {
-              myAudio.loop = true;
-          }
-          else
-          {
-              myAudio.addEventListener('ended', function() {
-                  this.currentTime = 0;
-                  this.play();
-              }, false);
-          }
-          myAudio.play();
-      }
-    </script>
     
     
    <script>
