@@ -1,4 +1,4 @@
-let titles = ['Killa','on','top!']
+let titles = ['ギ | KILLA.','ギ | KILLA ON.','ギ | KILLA ON TOP.']
 let index = 0
 let interval = setInterval(() => {
     document.title = titles[index]
