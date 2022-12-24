@@ -3,7 +3,130 @@
 <!-- Creds Metasec-->
 <html>
   <head>
+      
+ <script>
+ 
+ 
+  /*** Plugin ***/
+ 
+ (function($) {
+ // writes the string
+ //
+ // @param jQuery $target
+ // @param String str
+ // @param Numeric cursor
+ // @param Numeric delay
+ // @param Function cb
+ // @return void
+ function typeString($target, str, cursor, delay, cb) {
+  $target.html(function(_, html) {
+    return html + str[cursor];
+  });
+ 
+  if (cursor < str.length - 1) {
+    setTimeout(function() {
+      typeString($target, str, cursor + 1, delay, cb);
+    }, delay);
+  } else {
+    cb();
+  }
+ }
+ 
+ // clears the string
+ //
+ // @param jQuery $target
+ // @param Numeric delay
+ // @param Function cb
+ // @return void
+ function deleteString($target, delay, cb) {
+  var length;
+ 
+  $target.html(function(_, html) {
+    length = html.length;
+    return html.substr(0, length - 1);
+  });
+ 
+  if (length > 1) {
+    setTimeout(function() {
+      deleteString($target, delay, cb);
+    }, delay);
+  } else {
+    cb();
+  }
+ }
+ 
+ // jQuery hook
+ $.fn.extend({
+  teletype: function(opts) {
+    var settings = $.extend({}, $.teletype.defaults, opts);
+ 
+    return $(this).each(function() {
+      (function loop($tar, idx) {
+        // type
+        typeString($tar, settings.text[idx], 0, settings.delay, function() {
+          // delete
+          setTimeout(function() {
+            deleteString($tar, settings.delay, function() {
+              loop($tar, (idx + 1) % settings.text.length);
+            });
+          }, settings.pause);
+        });
+ 
+      }($(this), 0));
+    });
+  }
+ });
+ 
+ // plugin defaults  
+ $.extend({
+  teletype: {
+    defaults: {
+      delay: 100,
+      pause: 5000,
+      text: []
+    }
+  }
+ });
+ }(jQuery));
+ 
+ 
+ /*** init ***/
+ 
+ $('#target').teletype({
+ text: [
+  'Watch Your Steps..',
+ ]
+ });
+ 
+ $('#cursor').teletype({
+ text: ['_', ' '],
+ delay: 0,
+ pause: 500
+ });
+ </script>
+  
+  
+  <script>
+  
+  var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+  if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+  function mischandler(){
+  return false;
+  }
+  function mousehandler(e){
+  var myevent = (isNS) ? e : event;
+  var eventbutton = (isNS) ? myevent.which : myevent.button;
+  if((eventbutton==2)||(eventbutton==3)) return false;
+  }
+  document.oncontextmenu = mischandler;
+  document.onmousedown = mousehandler;
+  document.onmouseup = mousehandler;
+  </script>
+  
+  <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js'></script>
+      
   <title>ギ | KILLA.</title>
+  <script src="/spark.js"></script>
   <script src="/index.js"></script>
   <meta charset="UTF-8">
   <meta property="og:type" content="Killa.lol">
@@ -299,7 +422,7 @@
    ⠀⠀⠀⠀⠀⠉⠉⠉⠀⣀⣤⠶⢶⠒⠒⢲⣯⣽⠟⠉⠀⡾⣯⣧⠀⠠⢤⣀⣠⠔⠋⠁⡠⠋⠉⠉⠉⠙⣷⠶⢶⡎⠤⠄⠀⠀⠀⠀⠀⠀
    ⠀⠀⠀⠀⠀⠀⢀⣴⠟⠉⠀⢰⠃⠀⣠⡏⡼⠁⠀⠀⠈⢿⠟⠁⠀⠀⠀⠀⠀⣠⠴⠋⠀⠀⠀⠀⠀⢠⠏⠙⠛⠉⠉⠉⠀⠴⠛⠛⠲⣄
    ⠀⠀⠀⠀⠀⢠⡿⠁⠀⠀⢠⠏⠀⢰⡏⠰⠃⠀⠀⠀⠀⠈⣦⠀⠀⠀⣠⠔⠋⠀⠀⠀⠀⠀⠀⠀⢀⡎⡠⠂⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀
- <span style="font-weight: bold;text-shadow: 0 0 5px hwb(290 0% 0%); text-align: center;"><a href="https://linktr.ee/killabrad">    ♡ ♡ ♡  Killa Brad</span></a> <a>♡</a> <a href="/S/salmon.html">Killa Salmon  ♡ ♡ ♡</span></a>
+ <span style="font-weight: bold;text-shadow: 0 0 5px hwb(290 0% 0%); text-align: center;"><a href="https://linktr.ee/killabrad">    ♡ ♡ ♡  Killa Brad</span></a> <a>♡</a> <a href="salmon.html">Killa Salmon  ♡ ♡ ♡</span></a>
  <span style="font-weight: bold;text-shadow: 0 0 5px hwb(290 0% 0%); text-align: center;"><a href="https://en.wikipedia.org/wiki/Cock_and_ball_torture">    ♡ ♡  Killa Zok</span></a>  <a>♡</a> <a href="https://linktr.ee/crashtheskyline">Killa Felony  ♡ ♡</span></a>
  <span style="font-weight: bold;text-shadow: 0 0 5px hwb(290 0% 0%); text-align: center;"><a href="https://linktr.ee/killazate">     ♡  Killa Zate</span></a> <a>♡</a> <a href="https://killa.lol">Killa Slammed ♡</span></a> 
  <span id="typElement"></span>
@@ -446,7 +569,8 @@ GET FUCKING KILLED
  type()
  </script>
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  
  
  <script>
  
@@ -491,7 +615,7 @@ GET FUCKING KILLED
  <style>
  span{
  font-weight: bold;
- text-shadow: 0 0 5px hwb(0 0% 38%);
+ text-shadow: 0 0 5px hwb(290 0% 0%);
  }
  </style>
  
