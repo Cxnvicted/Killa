@@ -2,131 +2,8 @@
 <!--Killa Brad#0024 / Killa Salmon#3917--> 
 <!-- Creds Metasec-->
 <html>
-  <head>
-      
- <script>
- 
- 
-  /*** Plugin ***/
- 
- (function($) {
- // writes the string
- //
- // @param jQuery $target
- // @param String str
- // @param Numeric cursor
- // @param Numeric delay
- // @param Function cb
- // @return void
- function typeString($target, str, cursor, delay, cb) {
-  $target.html(function(_, html) {
-    return html + str[cursor];
-  });
- 
-  if (cursor < str.length - 1) {
-    setTimeout(function() {
-      typeString($target, str, cursor + 1, delay, cb);
-    }, delay);
-  } else {
-    cb();
-  }
- }
- 
- // clears the string
- //
- // @param jQuery $target
- // @param Numeric delay
- // @param Function cb
- // @return void
- function deleteString($target, delay, cb) {
-  var length;
- 
-  $target.html(function(_, html) {
-    length = html.length;
-    return html.substr(0, length - 1);
-  });
- 
-  if (length > 1) {
-    setTimeout(function() {
-      deleteString($target, delay, cb);
-    }, delay);
-  } else {
-    cb();
-  }
- }
- 
- // jQuery hook
- $.fn.extend({
-  teletype: function(opts) {
-    var settings = $.extend({}, $.teletype.defaults, opts);
- 
-    return $(this).each(function() {
-      (function loop($tar, idx) {
-        // type
-        typeString($tar, settings.text[idx], 0, settings.delay, function() {
-          // delete
-          setTimeout(function() {
-            deleteString($tar, settings.delay, function() {
-              loop($tar, (idx + 1) % settings.text.length);
-            });
-          }, settings.pause);
-        });
- 
-      }($(this), 0));
-    });
-  }
- });
- 
- // plugin defaults  
- $.extend({
-  teletype: {
-    defaults: {
-      delay: 100,
-      pause: 5000,
-      text: []
-    }
-  }
- });
- }(jQuery));
- 
- 
- /*** init ***/
- 
- $('#target').teletype({
- text: [
-  'Watch Your Steps..',
- ]
- });
- 
- $('#cursor').teletype({
- text: ['_', ' '],
- delay: 0,
- pause: 500
- });
- </script>
-  
-  
-  <script>
-  
-  var isNS = (navigator.appName == "Netscape") ? 1 : 0;
-  if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
-  function mischandler(){
-  return false;
-  }
-  function mousehandler(e){
-  var myevent = (isNS) ? e : event;
-  var eventbutton = (isNS) ? myevent.which : myevent.button;
-  if((eventbutton==2)||(eventbutton==3)) return false;
-  }
-  document.oncontextmenu = mischandler;
-  document.onmousedown = mousehandler;
-  document.onmouseup = mousehandler;
-  </script>
-  
-  <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js'></script>
-      
+  <head>  
   <title>ギ | KILLA.</title>
-  <script src="/spark.js"></script>
   <script src="/index.js"></script>
   <meta charset="UTF-8">
   <meta property="og:type" content="Killa.lol">
@@ -136,8 +13,7 @@
   <meta name="theme-color" content="#000000">
   <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/others/oth-8/oth704.cur), auto !important;}</style><a href="https://killa.lol" target="_blank" title="Bloody Knife"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Bloody Knife" style="position:absolute; top: 0px; right: 0px;" /></a>
   <link rel="icon" href="https://cdn.discordapp.com/attachments/1051942010963099788/1052996069518217256/images_1.png" type="image/gif" sizes="16x16">
-  <audio autoplay="true" src="/home/devilish.mp3"></audio>
-      <style>
+  <style>
   
       
  
@@ -569,8 +445,6 @@ GET FUCKING KILLED
  type()
  </script>
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  
  
  <script>
  
