@@ -118,7 +118,7 @@
      font-size: 16px;
      user-select: none;
      color: hwb(258 0% 0%);
-     background: repeating-linear-gradient(120deg, hwb(258 0% 0%) 0%, black 20%, hwb(258 0% 0%) 20%);
+     background: repeating-linear-gradient(120deg, hwb(258 0% 0%) 0%, black 20%, hwb(0 0% 0%) 20%);
      background-size: 60vw 60vw;
      -webkit-text-fill-color: transparent;
      -webkit-background-clip: text;
@@ -139,7 +139,7 @@
      font-size: 16px;
      user-select: none;
      color: hwb(155 0% 31%);
-     background: repeating-linear-gradient(120deg, hwb(258 0% 0%) 0%, black 20%, hwb(258 0% 0%) 20%);
+     background: repeating-linear-gradient(120deg, hwb(258 0% 0%) 0%, black 20%, hwb(0 0% 0%) 20%);
      background-size: 60vw 60vw;
      -webkit-text-fill-color: transparent;
      -webkit-background-clip: text;
@@ -163,7 +163,7 @@
      top: 20px;
      width: 400px;
      height: 38px;
-     background: repeating-linear-gradient(120deg, hwb(258 0% 0%) 0%, black 20%, hwb(258 0% 0%) 20%);
+     background: repeating-linear-gradient(120deg, hwb(258 0% 0%) 0%, black 20%, hwb(0 0% 0%) 20%);
      background-size: 60vw 60vw;
      animation: slide 10s linear infinite forwards;
      transition: 4s;
