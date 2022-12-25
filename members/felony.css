@@ -59,7 +59,7 @@
     }
     
     a {
-     color: rgb(0, 64, 80);
+     color: rgb(255, 208, 0);
      text-decoration: none;
      padding: 0;
     }
@@ -138,7 +138,7 @@
      font-weight: bold;
      font-size: 16px;
      user-select: none;
-     color: hwb(155 0% 31%);
+     color: hwb(49 0% 0%);
      background: repeating-linear-gradient(120deg, hwb(0 100% 0%) 0%, black 20%, hwb(36 0% 0%) 20%);
      background-size: 60vw 60vw;
      -webkit-text-fill-color: transparent;
@@ -163,7 +163,7 @@
      top: 20px;
      width: 400px;
      height: 38px;
-     background: repeating-linear-gradient(120deg, hwb(0 100% 0%) 0%, black 20%, hwb(36 0% 0%) 20%);
+     background: repeating-linear-gradient(120deg, hwb(27 0% 0%) 0%, black 20%, hwb(36 0% 0%) 20%);
      background-size: 60vw 60vw;
      animation: slide 10s linear infinite forwards;
      transition: 4s;
