@@ -1,0 +1,1345 @@
+
+ <!doctype html>
+ <html lang="en">
+ <head>
+ <meta charset="utf-8" />
+ <title>FEDS.LOL</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+ <link rel="shortcut icon" href="assets/images/favicon.ico">
+ 
+ <link href="https://feds.lol/assets/libs/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+ 
+ <link rel="stylesheet" href="https://feds.lol/assets/libs/owl.carousel/assets/owl.carousel.min.css">
+ <link rel="stylesheet" href="https://feds.lol/assets/libs/owl.carousel/assets/owl.theme.default.min.css">
+ 
+ <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+ 
+ <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+ 
+ <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <link href="assets/vendors/animation/animate.css" rel="stylesheet">
+ <meta http-equiv="expires" content="Sun, 01 Jan 2014 00:00:00 GMT" />
+ <meta http-equiv="pragma" content="no-cache" />
+ <script nonce="6cb27243-07b3-4ccf-b321-bddffcc6fafb">(function(w,d){!function(eK,eL,eM,eN){eK.zarazData=eK.zarazData||{};eK.zarazData.executed=[];eK.zaraz={deferred:[],listeners:[]};eK.zaraz.q=[];eK.zaraz._f=function(eO){return function(){var eP=Array.prototype.slice.call(arguments);eK.zaraz.q.push({m:eO,a:eP})}};for(const eQ of["track","set","debug"])eK.zaraz[eQ]=eK.zaraz._f(eQ);eK.zaraz.init=()=>{var eR=eL.getElementsByTagName(eN)[0],eS=eL.createElement(eN),eT=eL.getElementsByTagName("title")[0];eT&&(eK.zarazData.t=eL.getElementsByTagName("title")[0].text);eK.zarazData.x=Math.random();eK.zarazData.w=eK.screen.width;eK.zarazData.h=eK.screen.height;eK.zarazData.j=eK.innerHeight;eK.zarazData.e=eK.innerWidth;eK.zarazData.l=eK.location.href;eK.zarazData.r=eL.referrer;eK.zarazData.k=eK.screen.colorDepth;eK.zarazData.n=eL.characterSet;eK.zarazData.o=(new Date).getTimezoneOffset();if(eK.dataLayer)for(const eX of Object.entries(Object.entries(dataLayer).reduce(((eY,eZ)=>({...eY[1],...eZ[1]})))))zaraz.set(eX[0],eX[1],{scope:"page"});eK.zarazData.q=[];for(;eK.zaraz.q.length;){const e_=eK.zaraz.q.shift();eK.zarazData.q.push(e_)}eS.defer=!0;for(const fa of[localStorage,sessionStorage])Object.keys(fa||{}).filter((fc=>fc.startsWith("_zaraz_"))).forEach((fb=>{try{eK.zarazData["z_"+fb.slice(7)]=JSON.parse(fa.getItem(fb))}catch{eK.zarazData["z_"+fb.slice(7)]=fa.getItem(fb)}}));eS.referrerPolicy="origin";eS.src="/ventryshield/contents.js?z="+btoa(encodeURIComponent(JSON.stringify(eK.zarazData)));eR.parentNode.insertBefore(eS,eR)};["complete","interactive"].includes(eL.readyState)?zaraz.init():eK.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,0,"script");})(window,document);</script></head>
+ 
+ <body data-layout-mode="dark">
+ <div class="layout-wrapper d-lg-flex">
+ 
+ <div class="side-menu flex-lg-column me-lg-1 ms-lg-0">
+ 
+ <div class="navbar-brand-box">
+  <a href="index.html" class="logo logo-dark">
+ <span class="logo-sm">
+ </span>
+ </a>
+ <a href="index.html" class="logo logo-light">
+ <span class="logo-sm">
+ </span>
+ </a>
+ </div>
+ 
+ 
+ <div class="flex-lg-column my-auto">
+ <ul class="nav nav-pills side-menu-nav justify-content-center" role="tablist">
+ <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="top" title="General">
+ <a class="nav-link" id="pills-general-tab" data-bs-toggle="pill" href="#pills-general" role="tab">
+ <i class="ri-home-6-fill"></i>
+ </a>
+ </li>
+ <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Biolink">
+ <a class="nav-link" id="pills-groups-tab" data-bs-toggle="pill" href="#pills-groups" role="tab">
+ <i class="ri-link"></i>
+ </a>
+ </li>
+ <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Profile">
+ <a class="nav-link" id="pills-user-tab" data-bs-toggle="pill" href="#pills-user" role="tab">
+ <i class="ri-user-2-line"></i>
+ </a>
+ </li>
+ </ul>
+ </div>
+ 
+ <div class="flex-lg-column d-none d-lg-block">
+ <ul class="nav side-menu-nav justify-content-center">
+ <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Log out">
+ <a class="nav-link dropdown-toggle" href="logout" role="button" aria-haspopup="true" aria-expanded="false">
+ <i class="ri-logout-box-r-fill"></i>
+ </a>
+ </li>
+ </ul>
+ </div>
+ 
+ </div>
+ 
+ 
+ <div class="chat-leftsidebar me-lg-1 ms-lg-0">
+ <div class="tab-content">
+ 
+ <div class="tab-pane" id="pills-user" role="tabpanel" aria-labelledby="pills-user-tab">
+ 
+ <div>
+ <div class="px-4 pt-4">
+ <h4 class="mb-0">My Profile</h4>
+ </div>
+ <div class="text-center p-4 border-bottom">
+ <div class="mb-4">
+ 
+ </div>
+ <h5 class="font-size-16 mb-1 text-truncate">Convicted</h5>
+ <p class="text-muted text-truncate mb-1"><i class="ri-record-circle-fill font-size-10 text-success me-1 ms-0 d-inline-block"></i>
+ Online</p>
+ </div>
+ 
+ 
+ <div class="p-4 user-profile-desc" data-simplebar>
+ <div class="text-muted">
+ <p class="mb-4"></p>
+ </div>
+ <div id="tabprofile" class="accordion">
+ <div class="simplebar-content" style="padding: 0px 8px;">
+ <h5 class="mb-3 px-3 font-size-16"></h5>
+ <ul class="list-unstyled chat-list chat-user-list">
+ <li class="active">
+ <a>
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <i class="ri-user-6-fill ri-2x"></i>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1">USER ID</h5>
+ <p class="chat-user-message text-truncate mb-0">
+ <b>7744</b></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li class="active">
+ <a>
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <i class="ri-group-fill ri-2x"></i>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1">ROLE</h5>
+ <p class="chat-user-message text-truncate mb-0">
+ <b>Member</b></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li class="active">
+ <a href="https://discord.com/api/oauth2/authorize?client_id=1058544981754781787&redirect_uri=https%3A%2F%2Ffeds.lol%2Foauth2%2Fdiscord&response_type=code&scope=guilds.members.read">
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <i class="ri-discord-fill ri-2x"></i>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1">DISCORD LINK</h5>
+ <p class="chat-user-message text-truncate mb-0">
+ <b>Click to link your discord</b></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li class="active">
+ <a data-bs-toggle="modal" data-bs-target="#biolinkstyle">
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <i class="ri-file-text-line ri-2x"></i>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1">STYLE</h5>
+ <p class="chat-user-message text-truncate mb-0">
+ <b>Click to change</b></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ </ul>
+ <br>
+ <ul class="list-unstyled chat-list chat-user-list">
+ <li>
+ <a>
+ <div class="d-flex">
+  <div class="chat-user-img online align-self-center me-3 ms-0">
+ <i class="ri-at-fill ri-2x"></i>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1">EMAIL
+ ADDRESS</h5>
+ <p class="chat-user-message text-truncate mb-0">
+ <b><span class="__cf_email__" data-cfemail="b6d8c2d9dbd7c4dfc5d8dfddd9c5f6d1dbd7dfda98d5d9db">[email&#160;protected]</span></b></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a>
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <i class="ri-rotate-lock-fill ri-2x"></i>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1">
+ PASSWORD</h5>
+ <p class="chat-user-message text-truncate mb-0"><b>************</b>
+ </p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ </ul>
+ </div>
+ </div>
+ 
+ </div>
+ 
+ </div>
+ 
+ </div>
+ 
+ 
+ <div class="tab-pane fade show active" id="pills-general" role="tabpanel" aria-labelledby="pills-general-tab">
+ 
+ <div>
+ <div class="px-4 pt-4">
+ <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+ 
+ var TxtType = function (el, toRotate, period) {
+   this.toRotate = toRotate;
+   this.el = el;
+   this.loopNum = 0;
+   this.period = parseInt(period, 10) || 2000;
+   this.txt = "";
+   this.tick();
+   this.isDeleting = false;
+ };
+ 
+ TxtType.prototype.tick = function () {
+   var i = this.loopNum % this.toRotate.length;
+   var fullTxt = this.toRotate[i];
+ 
+   if (this.isDeleting) {
+     this.txt = fullTxt.substring(0, this.txt.length - 1);
+   } else {
+     this.txt = fullTxt.substring(0, this.txt.length + 1);
+   }
+ 
+   this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+ 
+   var that = this;
+   var delta = 200 - Math.random() * 100;
+ 
+   if (this.isDeleting) {
+     delta /= 2;
+   }
+ 
+   if (!this.isDeleting && this.txt === fullTxt) {
+     delta = this.period;
+     this.isDeleting = true;
+   } else if (this.isDeleting && this.txt === "") {
+     this.isDeleting = false;
+     this.loopNum++;
+     delta = 500;
+   }
+ 
+   setTimeout(function () {
+     that.tick();
+   }, delta);
+ };
+ 
+ window.onload = function () {
+   var elements = document.getElementsByClassName("typewrite");
+   for (var i = 0; i < elements.length; i++) {
+     var toRotate = elements[i].getAttribute("data-type");
+     var period = elements[i].getAttribute("data-period");
+     if (toRotate) {
+       new TxtType(elements[i], JSON.parse(toRotate), period);
+     }
+   }
+   // INJECT CSS
+   var css = document.createElement("style");
+   css.type = "text/css";
+   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+   document.body.appendChild(css);
+ };
+ 
+ 
+ </script>
+ <div class="user-chat-nav float-end">
+ <div data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="" title="">
+ <ul class="list-unstyled chat-list">
+ <li>
+ <a href="market">
+ <div class="d-flex align-items-center">
+ <div "chat-user-img="" me-3="" ms-0"="">
+ <div class="avatar-xs">
+ <span class="avatar-title rounded-circle" style="background-color:transparent;color:#a6b0cf;">
+ <i class="ri-coin-line"></i>
+ </span>
+ </div>
+ </div>
+ <span>
+ <span class="typewrite" data-period="2000" data-type='[ "", "MARKETPLACE"]'>
+ <span class="wrap"></span>
+ </span>
+ </span>
+ </div>
+ </a>
+ </li>
+ </ul>
+ </div>
+ </div>
+ <h4 class="mb-4 wow fadeInRight" data-wow-delay="0.5s"><b>FEDS.LOL</b></h4>
+ </div> 
+ 
+ <div>
+ <div class="chat-message-list px-2" data-simplebar>
+ <h5 class="mb-3 px-3 font-size-16">Socials</h5>
+ <ul class="list-unstyled chat-list chat-user-list">
+ <li>
+ <a href="https://discord.gg/biolink">
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <i class="ri-links-line ri-2x"></i>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1">Our discord</h5>
+ <p class="chat-user-message text-truncate mb-0">
+ discord.gg/biolink</p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a href="https://www.tiktok.com/@feds.lol1">
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <i class="ri-links-line ri-2x"></i>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1">Our Tiktok</h5>
+ <p class="chat-user-message text-truncate mb-0">
+ tiktok.com/@feds.lol1</p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li>
+ </ul>
+ <h5 class="mb-3 px-3 font-size-16">Please do NOT exceed over 2 biolinks.</h5>
+ </div>
+ </div>
+ 
+ </div>
+ 
+ </div>
+ 
+ 
+ <div class="tab-pane" id="pills-groups" role="tabpanel" aria-labelledby="pills-groups-tab">
+ 
+ <div>
+ <div class="p-4">
+ <div class="user-chat-nav float-end">
+ <div data-bs-toggle="tooltip" data-bs-placement="bottom">
+ <ul class="list-unstyled chat-list">
+ <li>
+ <a href="Convicted" target="_blank">
+ <div class="d-flex align-items-center">
+ <div "chat-user-img me-3 ms-0">
+ <div class="avatar-xs">
+ <span class="avatar-title rounded-circle" style="background-color:transparent;color:#a6b0cf;">
+ <i class="ri-arrow-right-s-line ri-lg"></i>
+ </span>
+ </div>
+ </div>
+ <span>feds.lol/Convicted</span>
+ </div>
+ </a>
+ </li>
+ </ul>
+ </div>
+ </div>
+ <h4 class="mb-4">Biolink</h4>
+ </div>
+ 
+ <div class="p-4 chat-message-list chat-group-list" data-simplebar>
+ <ul class="list-unstyled chat-list">
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinkname">
+ <div class="d-flex align-items-center">
+ <div class="chat-user-img me-3 ms-0">
+ <div class="avatar-xs">
+ <span class="avatar-title rounded-circle bg-soft-secondary" style="color:#a6b0cf;">
+ <i class="ri-user-6-fill"></i>
+ </span>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-14 mb-0">Name</h5>
+ </div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinklink">
+ <div class="d-flex align-items-center">
+ <div class="chat-user-img me-3 ms-0">
+ <div class="avatar-xs">
+ <span class="avatar-title rounded-circle bg-soft-secondary text-primary">
+ <i class="ri-links-line" style="color:#a6b0cf;"></i>
+ </span>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-14 mb-0">Link</h5>
+ </div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinkprofilepicture">
+ <div class="d-flex align-items-center">
+ <div class="chat-user-img me-3 ms-0">
+ <div class="avatar-xs">
+ <span class="avatar-title rounded-circle bg-soft-secondary text-primary">
+ </span>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-14 mb-0">Profile picture</h5>
+ </div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinkbackground">
+ <div class="d-flex align-items-center">
+ <div class="chat-user-img me-3 ms-0">
+ <div class="avatar-xs">
+ <span class="avatar-title rounded-circle bg-soft-secondary text-primary">
+ </span>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-14 mb-0">Background</h5>
+ </div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinkbio">
+ <div class="d-flex align-items-center">
+ <div class="chat-user-img me-3 ms-0">
+ <div class="avatar-xs">
+ <span class="avatar-title rounded-circle bg-soft-secondary text-primary">
+ <i class="ri-double-quotes-l" style="color:#a6b0cf;"></i>
+ </span>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-14 mb-0">Bio</h5>
+ </div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinksocials">
+ <div class="d-flex align-items-center">
+ <div class="chat-user-img me-3 ms-0">
+ <div class="avatar-xs">
+ <span class="avatar-title rounded-circle bg-soft-secondary text-primary">
+ <i class="ri-open-arm-fill" style="color:#a6b0cf;"></i>
+ </span>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-14 mb-0">Socials</h5>
+ </div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinkmusic">
+ <div class="d-flex align-items-center">
+ <div class="chat-user-img me-3 ms-0">
+ <div class="avatar-xs">
+ <span class="avatar-title rounded-circle bg-soft-secondary text-primary">
+ <i class="ri-customer-service-fill" style="color:#a6b0cf;"></i>
+ </span>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-14 mb-0">Music
+ </h5>
+ </div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinkdiscorduserid">
+ <div class="d-flex align-items-center">
+ <div class="chat-user-img me-3 ms-0">
+ <div class="avatar-xs">
+ <span class="avatar-title rounded-circle bg-soft-secondary text-primary">
+ <i class="ri-discord-fill" style="color:#a6b0cf;"></i>
+ </span>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-14 mb-0">Discord Presence
+ </h5>
+ </div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinkbecomepremium" style="filter: drop-shadow(8px 8px 12px #666666);color:#57d0da;">
+ <div class="d-flex align-items-center">
+ <div class="chat-user-img me-3 ms-0">
+ <div class="avatar-xs">
+ <span class="avatar-title rounded-circle text-primary" style="background-color:#57d0da;">
+ <i class="ri-vip-diamond-fill" style="color:#fff;"></i>
+ </span>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-14 mb-0">Premium Access
+ </h5>
+ </div>
+ </div>
+ </a>
+ </li>
+ </ul>
+ </div>
+ 
+ </div>
+ 
+ </div>
+ 
+ 
+ 
+ </div>
+ 
+ </div>
+ 
+ 
+ <div class="user-chat w-100 overflow-hidden">
+ <div class="d-lg-flex">
+ 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <iframe frameborder="0" style="height: 100vh; overflow:scroll; width: 100%" src="Convicted" marginheight="1" marginwidth="1" name="cboxmain" id="cboxmain" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+ </div>
+ 
+ </div>
+ 
+ 
+ <script src="assets/libs/jquery/jquery.min.js"></script>
+ <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="assets/libs/simplebar/simplebar.min.js"></script>
+ <script src="assets/libs/node-waves/waves.min.js"></script>
+ 
+ <script src="assets/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+ 
+ <script src="assets/libs/owl.carousel/owl.carousel.min.js"></script>
+ 
+ <script src="assets/js/pages/index.init.js"></script>
+ <script src="assets/js/app.js"></script>
+ <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"786077667e568ee1","token":"033c33a962e74d16be982c1223e03590","version":"2022.11.3","si":100}' crossorigin="anonymous"></script>
+ </body>
+ 
+ <div class="modal fade" id="biolinkname" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <small>Change your biolink's display name</small>
+ </center>
+ <br>
+ <input type="text" name="biolink_name" class="form-control" id="addgroupname-input" value="">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+ <button name="biolinkname" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="modal fade" id="biolinklink" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <div style="text-align: center;">
+ <small>Change your biolink's URL</small>
+ </div>
+ <br>
+ <div class="input-group mb-3 bg-soft-secondary">
+ <div class="input-group-prepend">
+ <span class="input-group-text" id="basic-addon3" style="background-color:#303444;"><b>FEDS.LOL/</b></span>
+ </div>
+ <input type="text" name="biolink_link" class="form-control" id="addgroupname-input" value="Convicted">
+ </div>
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+ <button name="biolinklink" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ 
+ 
+ <div class="modal fade" id="biolinkbio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <small>Change your biolink's BIO</small>
+ </center>
+ <br>
+ <input type="text" name="biolink_bio" class="form-control" id="addgroupname-input" value="">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+ <button name="biolinkbio" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ <div class="modal fade" id="biolinkprofilepicture" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <small>Change your biolink's profile picture</small>
+ </center>
+ <br>
+ <input type="text" name="biolink_profilepicture" class="form-control" id="addgroupname-input" value="" placeholder="Profile Picture URL">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+ <button name="biolinkprofilepicture" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ <div class="modal fade" id="biolinkbackground" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <small>Change your biolink's background</small>
+ </center>
+ <br>
+ <input type="text" name="biolink_background" class="form-control" id="addgroupname-input" value="" placeholder="Background URL">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+ <button name="biolinkbackground" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="modal fade" id="biolinksocials" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <small>Add your biolink's socials</small>
+ </center>
+ <style>
+ 
+ 
+     .alert_social {
+     position: relative;
+     padding: 0.15rem 1.25rem;
+     margin-bottom: 0rem;
+     border: 1px solid transparent;
+     border-radius: 0.25rem;
+     background-color:#202226;
+ }
+     .alert_content {
+         transform: translate(0%, 0%);
+             font-size: 1.6em;
+     }
+ 
+ 
+ </style>
+ <br>
+ <div class="simplebar-content" style="padding: 0px 8px;">
+ <h5 class="mb-3 px-3 font-size-16"></h5>
+ <ul class="list-unstyled chat-list chat-user-list">
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinksocial_instagram">
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-instagram-line" style="color:white;border"></i>
+ </div>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1" style="padding-top:12px;">Instagram</h5>
+ <p class="chat-user-message text-truncate mb-0"></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinksocial_twitter">
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-twitter-line" style="color:white;border"></i>
+ </div>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1" style="padding-top:12px;">Twitter</h5>
+ <p class="chat-user-message text-truncate mb-0"></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinksocial_twitch">
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-twitch-line" style="color:white;border"></i>
+ </div>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1" style="padding-top:12px;">Twitch</h5>
+ <p class="chat-user-message text-truncate mb-0"></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinksocial_youtube">
+  <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-youtube-fill" style="color:white;border"></i>
+ </div>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1" style="padding-top:12px;">YouTube</h5>
+ <p class="chat-user-message text-truncate mb-0"></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinksocial_github">
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-github-fill" style="color:white;border"></i>
+ </div>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1" style="padding-top:12px;">Github</h5>
+ <p class="chat-user-message text-truncate mb-0"></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinksocial_discord">
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-discord-fill" style="color:white;border"></i>
+ </div>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1" style="padding-top:12px;">Discord</h5>
+ <p class="chat-user-message text-truncate mb-0"></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinksocial_tiktok">
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-music-line" style="color:white;border"></i>
+ </div>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1" style="padding-top:12px;">TikTok</h5>
+ <p class="chat-user-message text-truncate mb-0"></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinksocial_telegram">
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-telegram-fill" style="color:white;border"></i>
+ </div>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1" style="padding-top:12px;">Telegram</h5>
+ <p class="chat-user-message text-truncate mb-0"></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinksocial_paypal">
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-paypal-fill" style="color:white;border"></i>
+ </div>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1" style="padding-top:12px;">PayPal</h5>
+ <p class="chat-user-message text-truncate mb-0"></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ <li>
+ <a data-bs-toggle="modal" data-bs-target="#biolinksocial_ogu">
+ <div class="d-flex">
+ <div class="chat-user-img online align-self-center me-3 ms-0">
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-money-dollar-box-fill" style="color:white;border"></i>
+ </div>
+ </div>
+ </div>
+ <div class="flex-grow-1 overflow-hidden">
+ <h5 class="text-truncate font-size-15 mb-1" style="padding-top:12px;">OGU</h5>
+ <p class="chat-user-message text-truncate mb-0"></p>
+ </div>
+ <div class="font-size-11"></div>
+ </div>
+ </a>
+ </li>
+ </ul>
+ </div>
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+ <button name="" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ <div class="modal fade" id="biolinksocial_instagram" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-instagram-line" style="color:white;border"></i>
+ </div>
+ </div>
+ <br>
+ <small><b>Instagram.com/</b></small>
+ </center>
+ <br>
+ <input type="text" name="biolink_social_ig" class="form-control" id="addgroupname-input" value="">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#biolinksocials"><i class="ri-arrow-left-fill"></i></button>
+ <button name="biolink_social_instagram" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ <div class="modal fade" id="biolinksocial_twitter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-twitter-line" style="color:white;border"></i>
+ </div>
+ </div>
+ <br>
+ <small><b>Twitter.com/</b></small>
+ </center>
+ <br>
+ <input type="text" name="biolink_social_tw" class="form-control" id="addgroupname-input" value="">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#biolinksocials"><i class="ri-arrow-left-fill"></i></button>
+ <button name="biolink_social_twitter" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ <div class="modal fade" id="biolinksocial_twitch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-twitch-line" style="color:white;border"></i>
+ </div>
+ </div>
+ <br>
+ <small><b>Twitch.tv/</b></small>
+ </center>
+ <br>
+ <input type="text" name="biolink_social_twitch" class="form-control" id="addgroupname-input" value="">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#biolinksocials"><i class="ri-arrow-left-fill"></i></button>
+ <button name="biolink_social_twitchtv" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ <div class="modal fade" id="biolinksocial_youtube" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-youtube-fill" style="color:white;border"></i>
+ </div>
+ </div>
+ <br>
+ <small><b>YouTube.com/</b></small>
+ </center>
+ <br>
+ <input type="text" name="biolink_social_yt" class="form-control" id="addgroupname-input" value="">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#biolinksocials"><i class="ri-arrow-left-fill"></i></button>
+ <button name="biolink_social_youtube" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ <div class="modal fade" id="biolinksocial_github" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-github-fill" style="color:white;border"></i>
+ </div>
+ </div>
+ <br>
+ <small><b>GitHub.com/</b></small>
+ </center>
+ <br>
+ <input type="text" name="biolink_social_gh" class="form-control" id="addgroupname-input" value="">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#biolinksocials"><i class="ri-arrow-left-fill"></i></button>
+ <button name="biolink_social_github" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ <div class="modal fade" id="biolinksocial_discord" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-discord-fill" style="color:white;border"></i>
+ </div>
+ </div>
+ <br>
+ <small><b>Discord.gg/</b></small>
+ </center>
+ <br>
+ <input type="text" name="biolink_social_dc" class="form-control" id="addgroupname-input" value="">
+ </div>
+  <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#biolinksocials"><i class="ri-arrow-left-fill"></i></button>
+ <button name="biolink_social_discord" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ <div class="modal fade" id="biolinksocial_tiktok" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-music-line" style="color:white;border"></i>
+ </div>
+ </div>
+ <br>
+ <small><b>TikTok.com/@</b></small>
+ </center>
+ <br>
+ <input type="text" name="biolink_social_tt" class="form-control" id="addgroupname-input" value="">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#biolinksocials"><i class="ri-arrow-left-fill"></i></button>
+ <button name="biolink_social_tiktok" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ <div class="modal fade" id="biolinksocial_telegram" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-telegram-fill" style="color:white;border"></i>
+ </div>
+ </div>
+ <br>
+ <small><b>t.me/</b></small>
+ </center>
+ <br>
+ <input type="text" name="biolink_social_tg" class="form-control" id="addgroupname-input" value="">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#biolinksocials"><i class="ri-arrow-left-fill"></i></button>
+ <button name="biolink_social_telegram" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ <div class="modal fade" id="biolinksocial_paypal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-paypal-fill" style="color:white;border"></i>
+ </div>
+ </div>
+ <br>
+ <small><b>PayPal.me/</b></small>
+ </center>
+ <br>
+ <input type="text" name="biolink_social_pp" class="form-control" id="addgroupname-input" value="">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#biolinksocials"><i class="ri-arrow-left-fill"></i></button>
+ <button name="biolink_social_paypal" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ <div class="modal fade" id="biolinksocial_ogu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <div class="alert_social" role="alert">
+ <div class="alert_content">
+ <i class="ri-money-dollar-box-fill" style="color:white;border"></i>
+ </div>
+ </div>
+ <br>
+ <small><b>ogu.gg/</b></small>
+ </center>
+ <br>
+ <input type="text" name="biolink_social_ogu" class="form-control" id="addgroupname-input" value="">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#biolinksocials"><i class="ri-arrow-left-fill"></i></button>
+ <button name="biolink_social_ogugg" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ <style>
+ @media (max-width: 800px) {
+   .become_premium_image {
+     width: 100%;
+   }
+   .alert-premium {
+     width: 100%;
+   }
+   .modal-content {
+       width:100% !important;
+   }
+ }
+ 
+ 
+ .premium_learnmore a:active, a:hover, a:focus {color: #3e9ca7;}
+ 
+ 
+ </style>
+ 
+ <div class="modal fade" id="biolinkbecomepremium" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content" style="width:680px;">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Premium Access</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <center>
+ <div class="alert alert-info alert-premium" role="alert" style="background-color:#111828;border-color:#111828;">
+ <span style="color:white;">Looks like you haven’t bought premium yet! Join our <a class="premium_learnmore" href="https://discord.gg/biolink" target="_blank">discord</a> and direct message court#1337 to purchase.</span>
+ </div>
+ </center>
+ <img class="become_premium_image wow fadeInRight" src="assets/img/fedslol_become_premium.png" alt="" style="visibility: visible; animation-name: fadeInRight;">
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="modal fade" id="biolinkmusic" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <div style="text-align: center;">
+ <small>Change your biolink's Spotify Music Track</small>
+ <small style="color:#ffd166;">[add TrackID only]</small>
+ </div>
+ <br>
+ <input type="text" name="biolink_music" class="form-control" id="addgroupname-input" value="" placeholder="TrackID">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+ <button name="biolinkmusic" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ 
+ 
+ <div class="modal fade" id="biolinkdiscorduserid" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body">
+ <div style="text-align: center;">
+ <small>Change your biolink's <b>Discord User ID</b></small>
+ <small target="_blank" href="https://discord.gg/kH46fVQV" style="color:#ffd166;">[Must join <a style="color:#ffd166;" target="_blank" href="https://discord.gg/biolink"><b><ins>https://discord.gg/biolink</ins></b></a> in order to display your status]</small>
+ </div>
+ <br>
+ <input type="text" name="biolink_discorduserid" class="form-control" id="addgroupname-input" value="" placeholder="Discord User ID">
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+ <button name="biolinkdiscorduserid" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="modal fade" id="biolinkstyle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <form action="" method="post" enctype="multipart/form-data">
+ <div class="modal-header">
+ <h5 class="modal-title" id="exampleModalLabel">Biolink settings</h5>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ </div>
+ <div class="modal-body" style="overflow: hidden">
+ <div style="text-align: center;">
+  <small>Choose a style for your biolink</small>
+ </div>
+ <br>
+ <input type="image" uid="1" class="float-start" src="https://cdn.discordapp.com/attachments/1024416342457196596/1059897991001026650/image.png" width="45%" height="45%" style="padding: 5px; border-style: none; border-color: #7a7f9a; border-radius: 10px" onclick="styleSelected(event, this)">
+ <input type="image" uid="2" class="float-end" src="https://cdn.discordapp.com/attachments/1024416342457196596/1059897934205960265/image.png" width="45%" height="45%" style="padding: 5px; border-style: none; border-color: #7a7f9a; border-radius: 10px" onclick="styleSelected(event, this)">
+ <input type="text" name="biolink_style" id="addgroupname-input" style="display: none">
+ <script>
+                                 var styleModal = document.querySelector("#biolinkstyle");
+                                 var inputs = styleModal.querySelectorAll('input');
+ 
+                                 inputs[-1].style.borderStyle = 'solid';
+ 
+                                 function styleSelected(event, element) {
+                                     event.preventDefault();
+ 
+                                     selectToggle(element.getAttribute('uid'));
+ 
+                                     console.log(element);
+                                 }
+ 
+                                 function selectToggle(value) {
+                                     inputs[2].setAttribute('value', value);
+ 
+                                     switch(value) {
+                                         case "1":
+                                             inputs[1].style.borderStyle = 'none';
+                                             inputs[0].style.borderStyle = 'solid';
+                                             break;
+                                         case "2":
+                                             inputs[0].style.borderStyle = 'none';
+                                             inputs[1].style.borderStyle = 'solid';
+                                     }
+                                 }
+                             </script>
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+ <button name="biolinkstyle" type="submit" class="btn btn-info">Save</button>
+ </div>
+ </form>
+ </div>
+  </div>
+ </div>
+ </html>
+ 
