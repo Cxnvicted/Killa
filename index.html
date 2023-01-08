@@ -1,494 +1,107 @@
 
-<!--Killa Brad#0024 / Killa Salmon#3917--> 
-<!-- Creds Metasec-->
-<html>
-  <head>  
-  <title>Killa .</title>
-  <script src="/index.js"></script>
-  <meta charset="UTF-8">
-  <meta property="og:type" content="Killa.lol">
-  <meta property="og:title" content="ゔ KILLASONTOP" />
-  <meta property="og:description" content="Killa || .gg/fp3j3ayz7F " />
-  <meta property="og:url" content="https://killa.lol/" />
-  <meta name="theme-color" content="#00000">
-  <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/others/oth-8/oth704.cur), auto !important;}</style><a href="https://killa.lol" target="_blank" title="Bloody Knife"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Bloody Knife" style="position:absolute; top: 0px; right: 0px;" /></a>
-  <link rel="icon" href="https://cdn.discordapp.com/attachments/1004849202507038804/1061453777388974100/966354724381159524.gif" type="image/gif" sizes="16x16">
-  <style>
-  
-      
- 
- 
-  .typewriter-text1 {
-    animation-name: typewriter1;
-    }
-    
-    
-    
-    .typewriter-text1{
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    position: relative;
-    animation-duration: 15s;
-    animation-timing-function: steps(45, end);
-    animation-iteration-count: infinite;
-    }
-    
-    .typewriter-text1::after {
-    content: "|";
-    position: absolute;
-    animation: caret infinite;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(1, end);
-    }
-    
-    @keyframes typewriter1 {
-    0%,
-    50%,
-    100% {
-     width: 0;
-    }
-    10%,
-    40% {
-     width: 25em;
-    }
-    }
-    
-    @keyframes caret {
-    0%,
-    100% {
-     opacity: 0;
-    }
-    50% {
-     opacity: 1;
-    }
-    }
-     
-    body {
-     margin: 0;
-     padding: 0;
-     background-color: rgb(0, 0, 0);
-     overflow: hidden;
-     font-family: "Brandon Light";
-     color: #ffffff;
-     user-select: none;
-     opacity: 0;
-     transition: opacity 2s;
-     -webkit-transition: opacity 5s; /* Safari */
-    }
-    
-    a {
-     color: rgb(255, 208, 0);
-     text-decoration: none;
-     padding: 0;
-    }
-    
-    .center {
-     position: absolute;
-     text-align: center;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     
-    }
-    
-    #border {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     box-sizing: border-box;
-     pointer-events: none;
-     z-index: -1;
-    }
-    
-    
-    #borderTop, #borderBottom {
-     position: absolute;
-     width: 0%;
-     height: 4px;
-     background-color: rgb(0, 0, 0);
-    }
-    
-    #borderRight, #borderLeft {
-     position: absolute;
-     width: 3px;
-     height: 0%;
-     background-color: rgb(0, 0, 0);
-    }
-    
-    video {
-     position: fixed;
-     right: 0;
-     bottom: 0;
-     min-width: 100%;
-     min-height: 100%;
-     z-index: -2;
-     filter: blur(5px) brightness(30%);
-     pointer-events: none;
-    }
-    
-    #test p {
-     opacity: 0;
-    }
-    
-    pre {
-     -webkit-animation: fadein 2s;
-     font-weight: bold;
-     font-size: 16px;
-     user-select: none;
-     color: hwb(0 100% 0%);
-     background: repeating-linear-gradient(120deg, hwb(0 100% 0%) 0%, black 20%, hwb(36 0% 0%) 20%);
-     background-size: 60vw 60vw;
-     -webkit-text-fill-color: transparent;
-     -webkit-background-clip: text;
-     animation: slide 8s linear infinite forwards;
-    }
-    
-    @keyframes slide {
-     0% {
-         background-position-x: 0%;
-     }
-     100% {
-         background-position-x: 60vw;
-     }
-    }
-    
-    pre2 {
-     font-weight: bold;
-     font-size: 16px;
-     user-select: none;
-     color: hwb(49 0% 0%);
-     background: repeating-linear-gradient(120deg, hwb(0 100% 0%) 0%, black 20%, hwb(36 0% 0%) 20%);
-     background-size: 60vw 60vw;
-     -webkit-text-fill-color: transparent;
-     -webkit-background-clip: text;
-     animation: slide2 4s linear infinite forwards;
-    }
-    
-    @keyframes slide2 {
-     0% {
-         background-position-x: 0%;
-     }
-     100% {
-         background-position-x: 60vw;
-     }
-    }
-    
-    
-    #widgetContainer {
-     opacity: 0;
-     position: absolute;
-     right: 20px;
-     top: 20px;
-     width: 400px;
-     height: 38px;
-     background: repeating-linear-gradient(120deg, hwb(0 100% 0%) 0%, black 20%, hwb(0 100% 0%) 20%);
-     background-size: 60vw 60vw;
-     animation: slide 10s linear infinite forwards;
-     transition: 4s;
-    }
-    
-    #widget {
-     position: absolute;
-     width: 394px;
-     height: 29px;
-     margin: 3px;
-     background-color: black;
-     z-index: 1;
-     transition: 2s;
-     
-    }
-    
-    #widgetMain {
-     position: absolute;
-     display: inline-flex;
-     justify-content: space-between;
-     margin-top: 3px;
-     padding-right: 10px;
-     padding-left: 10px;
-     width: 374px;
-     height: 29px;
-     z-index: 2;
-     background-color: rgb(0, 0, 0);
-    }
-    
-    #burgerMenu {
-     cursor: pointer;
-    }
-    
-    #dropDownContent {
-     display: none;
-     opacity: 0;
-     transition: 2s;
-     width: 100%;
-     height: 100%;
-     position: absolute;
-     margin-top: 30px;
-    }
-    
-    #links {
-     right: 5px;
-     width: 100px;
-     float: left;
-     margin-top: -4px;
-    }
-    
-    #groups {
-     float: right;
-     margin-top: 5px;
-    }
-    
-    #dropDownContent div a {
-     opacity: 0;
-     transition: 1s;
-     line-height: 18px;
-    }
-    
-    #dropDownContent div span {
-     margin-left: 10px;
-     margin-right: 10px;
-    }
-    
-    #groups a, #groups span {
-     float: right;
-    }
-    
-    .hitCount {
-     position: fixed;
-     bottom: 5px;
-     right: 5px;
-     transition: 3s;
-     color: var(--color);
-     font-size: 24px;
-     opacity: 0;
-     bottom: -3px;
-    }
-    
-    a.hitCounter.badge-done0 {
-     display: none!important;
-    }
-    
- 
- </style>
- <body onload="document.body.style.opacity='1'">
- <div class="center">
- <pre style="font-weight: bold;text-shadow: 0 0 5px hwb(0 100% 0%);">
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣟⠙⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡶⠛⠛⢷⡄⢀⣼⢿⡷⣄⠙⢿⣦⠀⠀⠀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⠸⡄⠀⣀⡘⣿⣟⠁⠀⠙⣿⣷⣤⣿⣷⠀⠀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⠋⠉⠉⢳⣷⣠⠽⠟⡼⠻⣦⣤⣼⣿⣿⠟⠛⠋⠀⠀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣨⣧⠀⠀⣾⢉⣛⡷⠶⠾⠷⠶⢾⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠋⠀⢸⢷⣄⢻⣄⠀⠀⠀⠀⠀⠀⠀⠙⢿⣻⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣆⡰⠋⠀⠙⠷⣼⣷⢦⡤⢤⣴⡶⠆⠀⠀⠉⢻⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡶⠛⠳⣤⡀⣀⣀⣸⠗⠚⣷⣞⣉⣿⠒⠒⠀⠀⠈⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡀⠀⠀⠸⣆⡀⠀⠀⠙⢾⡽⠞⣷⠞⢁⡾⠋⠙⠃⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢼⣿⣿⣶⣄⣀⣽⣿⣗⠶⠭⠵⣷⣞⠉⣹⣿⠃⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣁⠈⠻⣷⣤⡞⢉⡿⠛⡿⣿⡄⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣇⠈⠻⣿⣿⣷⣤⣼⣿⣿⠋⠀⠀⠧⠘⠟⠀⠀⠀⠀⠀⠀⢰⣟⠀⠀⠀⠀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⡟⢷⣄⠈⠻⣿⣿⣿⣟⠈⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠹⣦⡀⠀⠀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⣿⣿⣿⣧⠀⠙⠷⣄⠈⣻⣿⣿⣷⣜⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⢢⡀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠟⣡⣾⣿⣿⣿⡿⠀⠀⠀⢈⣴⠟⠀⠹⠿⠟⠀⠉⠻⢶⡶⠶⠀⠀⠀⠀⠀⢀⣴⠟⠃⠈⢷⣦⣤⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⣫⠼⢻⣿⣿⣿⣿⡇⠀⠀⣴⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣦⡀⠀⢀⣠⠴⠛⠁⠀⠀⠀⠀⣸⡿⣤⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⠁⠁⠀⢸⣿⣿⣿⡿⠁⢀⣾⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡼⣿⠾⠋⠁⠀⠀⠀⠀⠀⢀⡼⢿⣝⠦⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⡟⠁⠀⠀⠀⠀⢸⣿⣿⣿⣇⣰⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⢯⡿⠁⠀⣀⠀⠀⠀⠀⠀⣠⢿⡙⢦⡙⠛⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣷⠂⠀⠀⠀⠀⠘⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣯⢷⡀⢸⣿⡇⠀⠀⣠⣾⡙⢦⡙⢦⡙⠶⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⣿⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢳⡹⡆⠉⠀⣠⡾⠻⣦⡙⢦⡙⣮⡻⣦⡀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⣠⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣔⡏⢻⣤⠾⣯⡙⢦⡈⠻⣌⡻⣦⡻⣦⡀⠀
-  ⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⢀⣴⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣏⣸⠴⣯⣙⠳⣬⠻⣦⡙⢦⣈⠳⣌⠳⣬⠁⠀
-  ⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⣠⣾⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣷⣬⡙⢷⣌⠳⣬⡻⣦⠙⢧⡙⢷⣍⠃⠀
-  ⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⠃⢀⣼⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣦⣙⠷⣮⡻⣦⡻⣆⡙⢦⡙⠷⠀
-  ⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣧⣴⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠿⣷⣜⠳⣦⡹⢦⡳⢦⡻⣶⠀
-  ⠀⠀⢠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣷⣌⠷⣬⡻⢦⡳⣤⠀
-  ⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⣶⣌⠻⣮⡻⣮⡀
-           ⣾⣿⣿⣿⣿⣿⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⡌⢻⣮⡇             
-      </pre>
-      <pre>
-Private Biolink Service.
-      </pre>
-      </div></center>
-      </div>
- </pre>
- </div>
- <pre>   </pre>
- <pre>   <a href="https://discord.gg/fp3j3ayz7F"><span style="font-weight: bold;text-shadow: 0 0 5px hwb(0 100% 0%);">Claim</span> </a>
- </pre>
- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
- <style>
-  /* customizable snowflake styling */
-  .snowflake {
-    color: hwb(0 100% 0%);
-    font-size: 1em;
-    font-family: Arial, sans-serif;
-    text-shadow: 0 0 5px rgb(302 74% 0%);
-  }
-  
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
-  </style>
-  <div class="snowflakes" aria-hidden="true">
-    <div class="snowflake">
-      .
-    </div>
-    <div class="snowflake">
-      
-    </div>
-    <div class="snowflake">
-      .
-    </div>
-    <div class="snowflake">
-      
-    </div>
-    <div class="snowflake">
-      
-    </div>
-    <div class="snowflake">
-      .
-    </div>
-    <div class="snowflake">
-      .
-    </div>
-    <div class="snowflake">
-      
-    </div>
-    <div class="snowflake">
-      
-    </div>
-    <div class="snowflake">
-      
-    </div>
-    <div class="snowflake">
-      
-    </div>
-    <div class="snowflake">
-      .
-    </div>
-  </div>
-  <div>
+    <title>Evil.Site / Home</title>
 
-    <div>
-      <button id="button" style="color:hwb(0 100% 0%); font-family:'Courier New', Courier, monospace; border: none; margin: 0; background-color: #000000; position: absolute; top: 50%;left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; height: 100%;" onclick="playAudio();document.getElementById('button').hidden=true;document.getElementById('site').hidden=false">   
-  <div class="center">
-  <pre>
-                                    Click To Continue To The Site.                                  
-</button>
+    <link href="style/evil.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body class="ns">
+    <div id="main-container">
+            <pre class="evilsite ns">
+▓█████    ██▒   █▓    ██▓    ██▓                 ██████     ██▓   ▄▄▄█████▓   ▓█████ 
+▓█   ▀▓   ██░   █▒   ▓██▒   ▓██▒               ▒██    ▒    ▓██▒▓     ██▒ ▓▒   ▓█   ▀ 
+▒███      ▓██  █▒░   ▒██▒   ▒██░               ░ ▓██▄      ▒██▒▒    ▓██░ ▒░   ▒███   
+▒▓█  ▄     ▒██ █░░   ░██░   ▒██░                 ▒   ██▒   ░██░░    ▓██▓ ░    ▒▓█  ▄ 
+░▒████▒     ▒▀█░     ░██░   ░██████▒    ██▓    ▒██████▒▒   ░██░     ▒██▒ ░    ░▒████▒
+░░ ▒░ ░     ░ ▐░     ░▓     ░ ▒░▓  ░    ▒▓▒    ▒ ▒▓▒ ▒ ░   ░▓       ▒ ░░      ░░ ▒░ ░
+ ░ ░  ░     ░ ░░      ▒ ░   ░ ░ ▒  ░           ░ ░▒  ░ ░    ▒ ░       ░        ░ ░  ░
+   ░          ░░      ▒ ░     ░ ░              ░  ░  ░      ▒ ░     ░            ░   
+   ░  ░        ░      ░         ░                    ░      ░                    ░  ░
+                                                                          
 </pre>
-    </div>
- 
-       </div>
-  <script>
-    document.onkeydown = function(e) {
-    if(event.keyCode == 123) {
-        return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-        return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        return false;
-    }
-    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        return false;
-    }
-    }
-    document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-    });
-    document.getElementById('site').hidden=true
-    function playAudio() {
-        myAudio = new Audio('song.mp3'); 
-        if (typeof myAudio.loop == 'boolean')
-        {
-            myAudio.loop = true;
-        }
-        else
-        {
-            myAudio.addEventListener('ended', function() {
-                this.currentTime = 0;
-                this.play();
-            }, false);
-        }
-        myAudio.play();
-    }
-  </script>
-      
-  
- <script>
- 
- function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
- }
- 
- function type() {
-  let strs = [ 
-  <span style="font-weight: bold;text-shadow: 0 0 5px hwb(0 0% 87%);">
-GET FUCKING KILLED 
-  </span>
- ];
- 
- var num = getRandomInt(strs.length);
- 
- var typElement = document.getElementById('typElement');
- 
- var typewriter = new Typewriter(typElement, {
-  loop: true
- });
- 
- typewriter.typeString(strs[num]).pauseFor(5000).deleteAll().pauseFor(100).callFunction(() => {
-  typewriter.stop();
-  type();
- }).start();
- }
- </script>
- 
- <script>
- type()
- </script>
-  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
- 
- <script>
- 
- $(document).ready(function(){
-   var string = $.trim($('p').text());
-   string = string.replace(/\(([^)]+)\)/, "<span>$1</span>");
-   $('p').html(string);
- });
- 
- function getRandomInt(max) {
-     return Math.floor(Math.random() * Math.floor(max));
- }
- 
- function type() {
-     let strs = [
-           "1# Biolink Service",
- ];
+    <div id="navbar-contained" style="display: block;">
+        <ul class="nav">
+            <li><a href="../" class="selected">home</a></li>
+            <li><a href="news/" class="">news</a></li>
+            <li><a href="~/" class="">sites</a></li>
+            <li><a href="services/" class="">services</a></li>
+            <li><a href="donate/" class="">donate</a></li>
+            <li><a href="policy/" class="">policy</a></li>
+            <li><a href="upgrades/" class="">upgrades</a></li>
+        </ul>
+        <div id="navbar-scrolling">
+            <p class="marquee">
+                <span class="scroll">
+                    Welcome to evil.site, we currently host 16 websites on our service. Check out <a href="~/signup/">signup page</a> to get a site. We also have an <a href="https://evil.pm">XMPP</a> service :)
+                </span>
+                <span></span>
+            </p>  
+        </div>
+      </div>
+      <div class="content-wrap flex">
+        <div id="content-container" style="flex-grow: 1;">
+          <div class="wrapper">
+            <h1 class="wrapper-header">Welcome to evil.site! Here is a little about us</h1>
+            <p class="wrapper-p">
+              <span class="green">We will host your websites for free forever!</span> <a href="~/signup/" class="blue">Click here</a> to <span class="orange">request hosting</span>.<br>
+              We keep no data on users and the only thing required is an SSH key for logging in<br>
+              We offer multiple other privacy and data saving services for free and public use<br>
+              We do not use any DDoS Protection for optimal speeds and privacy concerns<br>
+              Current SSH Fingerprint: SHA256:asqY58+o6B6L1EIo74fCBIG8jvBEPpcfP/x0QGXpWpk (ED25519)<br>
+            </p>
+          </div>
+          <hr class="wrapper-seperator">
+          <div class="wrapper">
+            <h1 class="wrapper-header">Contact evil.site staff</h1>
+            <p class="wrapper-p">
+            EMAIL: <a class="ys">evil.site@disroot.org</a> - For account upgrades or issues<br>
+	    XMPP: <a class="ys">admin@evil.pm</a> - For general assistance<br>
+            Discord: <a href="https://discord.gg/opsec" class="blue">discord.gg/opsec</a> - For community chat<br>
+            </p>
+          </div>
+        </div>
 
- var num = getRandomInt(strs.length);
- 
- var typElement = document.getElementById('typElement');
- 
- var typewriter = new Typewriter(typElement, {
-     loop: true
- });
- 
- typewriter.typeString(strs[num]).pauseFor(500).deleteAll().pauseFor(10).callFunction(() => {
-     typewriter.stop();
-     type();
- }).start();
- }
- </script>
- 
- <style>
- span{
- font-weight: bold;
- text-shadow: 0 0 5px hwb(0 100% 0%);
- }
- </style>
- 
- <script>
- type()
- </script>
- </html>
-  
+
+        <div id="right-sidebar" style="display: block;">
+          <div class="sidebar-wrapper">  
+            <h1 class="wrapper-header">Evil's features</h1>
+            <ul>
+              <li>Javascript free</li>
+              <li>Privacy orientated</li>
+              <li>No censorship</li>
+              <li>Fast connection</li>
+              <li>SSH access</li>
+            </ul>
+          </div>
+          <hr class="wrapper-seperator">
+          <div class="sidebar-wrapper">  
+            <h1 class="wrapper-header">Quick navigation</h1>
+            <ul>
+              <li><a href="https://evil.pm">XMPP</a></li>
+	      <li><a href="https://nitter.evil.site/">Nitter</a></li>
+	      <li><a href="https://invidious.evil.site/">Invidious</a></li>
+	      <li><a href="https://evil.site/~/signup/">Request Hosting</a></li>
+            </ul>
+          </div>
+          <hr class="wrapper-seperator">
+          <div class="sidebar-wrapper" style="padding-bottom: 10px;">
+            <h1 class="wrapper-header">Users</h1>
+            <ul>
+              <li>Online: 1
+</li>
+	      <li>Total: 16</li>
+            </ul>
+	    <hr>
+	    <label for="reveal-userlist" class="wrapper-header"> > List Users</label>
+            <input type="checkbox" class="hidden-userlist" id="reveal-userlist" role="button">
+	    <div id="userlist">
+	        <li><a href="/dead/">dead</a</li>
+	    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
