@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <link href="https://northernsi.de/ebiofavicon.ico" rel="icon" type="image/x-icon"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ebio.gg @ $" property="og:title"/>
+    <meta content="website" property="og:type"/>
+    <meta content="https://ebio.gg/$" property="og:url"/>
+    <meta content="{avatar_url}" property="og:image"/>
+    <meta content="Check out Scott's social links and profile!" property="og:description"/>
+    <meta content="#2C2F33" name="theme-color">
+    <title>@$ - ebio.gg</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html,
+    body {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        place-items: center;
+        {background_placeholder}
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .title .quote {
+        margin-top: 5px;
+    }
+
+    .avatar {
+        border: 5px solid #23272A;
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        position: relative;
+        left: 10px;
+    }
+
+    .status {
+        background-color: #23272A;
+        padding: 5px;
+        border-radius: 38px;
+        z-index: 1;
+        position: relative;
+        top: -10px;
+        left: -50px;
+    }
+
+    .wrapper .button {
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        float: left;
+        margin: 0 5px;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 51px;
+        cursor: pointer;
+        box-shadow: 0px 10px 10px rgba(255, 145, 0, 0.1);
+        transition: all 0.3s ease-out;
+        color: black;
+    }
+
+    .wrapper .button:hover {
+        width: 200px;
+        color: black;
+    }
+
+    .wrapper .button .icon {
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        border-radius: 500px;
+        box-sizing: border-box;
+        line-height: 60px;
+        transition: all 0.3s ease-out;
+    }
+
+    .wrapper .button .icon i {
+        font-size: 25px;
+        line-height: 60px;
+        transition: all 0.3s ease-out;
+    }
+
+    .wrapper .button:hover .icon i {
+        color: #fff;
+    }
+
+    .wrapper .button span {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-left: 10px;
+        transition: all 0.3s ease-out;
+        color: black;
+    }
+
+    .footer p, h4, a {
+        text-align: center;
+        color: white;
+    }
+
+
+    /*
+    --------------------------------------------
+    */
+
+    .wrapper .button.discord:hover .icon {
+        background: #5865F2;
+    }
+
+    .wrapper .button.discord span {
+        color: #5865F2;
+    }
+
+    .wrapper .button.github:hover .icon {
+        background: #333;
+    }
+
+    .wrapper .button.github span {
+        color: #333;
+    }
+
+    .wrapper .button.tiktok:hover .icon {
+        background: #000000;
+    }
+
+    .wrapper .button.tiktok span {
+        color: #000000;
+    }
+
+    .wrapper .button.youtube:hover .icon {
+        background: #c4302b;
+    }
+
+    .wrapper .button.youtube span {
+        color: #c4302b;
+    }
+
+    .wrapper .button.twitch:hover .icon {
+        background: #6441a5;
+    }
+
+    .wrapper .button.twitch span {
+        color: #6441a5;
+    }
+
+    .wrapper .button.twitter:hover .icon {
+        background: #00acee;
+    }
+
+    .wrapper .button.twitter span {
+        color: #00acee;
+    }
+
+    .wrapper .button.snapchat:hover .icon {
+        background: #FFFC00;
+    }
+
+    .wrapper .button.snapchat span {
+        color: #FFFC00;
+    }
+
+    .wrapper .button.steam:hover .icon {
+        background: #1b2838;
+    }
+
+    .wrapper .button.steam span {
+        color: #1b2838;
+    }
+
+    .wrapper .button.instagram:hover .icon {
+        background: #C13584;
+    }
+
+    .wrapper .button.instagram span {
+        color: #C13584;
+    }
+
+    .wrapper .button.facebook:hover .icon {
+        background: #4267B2;
+    }
+
+    .wrapper .button.facebook span {
+        color: #4267B2;
+    }
+
+    .wrapper .button.spotify:hover .icon {
+        background: #1DB954;
+    }
+
+    .wrapper .button.spotify span {
+        color: #1DB954;
+    }
+
+    .wrapper .button.reddit:hover .icon {
+        background: #FF5700;
+    }
+
+    .wrapper .button.reddit span {
+        color: #FF5700;
+    }
+
+    .wrapper .button.soundcloud:hover .icon {
+        background: #ff5500;
+    }
+
+    .wrapper .button.soundcloud span {
+        color: #ff5500;
+    }
+
+    .wrapper .button.pinterest:hover .icon {
+        background: #cc0000;
+    }
+
+    .wrapper .button.pinterest span {
+        color: #cc0000;
+    }
+
+    .wrapper .button:hover .icon {
+        background: #4078c0;
+    }
+
+    .wrapper .button span {
+        color: #4078c0;
+    }
+
+    .badge {
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 28px;
+    }
+
+    .badge .badge-tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .badge .badge-tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+
+    .badge:hover .badge-tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .editBtn {
+        background-color: #282828;
+        background-size: cover;
+        border-radius: 7px;
+        padding: 8px;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+<body style="background-image: url('https://cdn.discordapp.com/attachments/981320598389141514/990688796293079050/F62F881D-EA8D-4440-AA17-475347E45B60.gif'); background-size: cover;">
+<!-- TEST -->
+<div class="title">
+    <div class="title-img">
+        <img alt="Avatar" class="avatar" src="https://cdn.discordapp.com/attachments/981320598389141514/990689716011692104/IMG_4608.png" onerror="this.src='https://cdn.discordapp.com/attachments/962052961905836142/993200463644196944/c09a43a372ba81e3018c3151d4ed4773.png'">
+        <img alt="Status" class="status" src="
+                                        https://cdn.discordapp.com/emojis/990723053245837374.webp
+                                    " style="width: 32px; 32px"/>
+    </div>
+    <h1 class="owner" style="color: #ffffff">Scott</h1>
+    
+								  <div class="badge">
+									<img src="https://cdn.discordapp.com/attachments/962052961905836142/990379369266569236/3099_ImgurThunderCloud.png" style="width: 20px; height: 20px;" alt="Beta User">
+									<span class="badge-tooltiptext">Beta User</span>
+								  </div>
+								
+								  <div class="badge">
+									<img src="https://cdn.discordapp.com/emojis/921533453160292433.webp" style="width: 20px; height: 20px;" alt="Verified">
+									<span class="badge-tooltiptext">Verified</span>
+								  </div>
+								
+								  <div class="badge">
+									<img src="https://cdn.discordapp.com/attachments/962052961905836142/990379253579260005/9421_ImgurRaibowStar.png" style="width: 20px; height: 20px;" alt="Alpha User">
+									<span class="badge-tooltiptext">Alpha User</span>
+								  </div>
+								
+								  <div class="badge">
+									<img src="https://media.discordapp.net/attachments/988567529947541504/991387882579316866/unknown.png" style="width: 20px; height: 20px;" alt="scott">
+									<span class="badge-tooltiptext">scott</span>
+								  </div>
+								
+								  <div class="badge">
+									<img src="https://cdn.discordapp.com/attachments/991504657841143808/991513469184651404/IMG_4644.gif" style="width: 20px; height: 20px;" alt="Royalty">
+									<span class="badge-tooltiptext">Royalty</span>
+								  </div>
+								
+								  <div class="badge">
+									<img src="https://cdn.discordapp.com/attachments/991504657841143808/991523377636458546/IMG_4647.gif" style="width: 20px; height: 20px;" alt="Eclipse">
+									<span class="badge-tooltiptext">Eclipse</span>
+								  </div>
+								
+								  <div class="badge">
+									<img src="https://media.discordapp.net/attachments/988567529947541504/991491857970364506/912197079554736159.webp" style="width: 20px; height: 20px;" alt="cat">
+									<span class="badge-tooltiptext">cat</span>
+								  </div>
+								
+								  <div class="badge">
+									<img src="https://cdn.discordapp.com/attachments/990677282626625607/991683686590337216/IMG_4653.gif" style="width: 20px; height: 20px;" alt="$">
+									<span class="badge-tooltiptext">$</span>
+								  </div>
+								
+								  <div class="badge">
+									<img src="https://media.discordapp.net/attachments/990677282626625607/991700666105999370/IMG_4656.gif" style="width: 20px; height: 20px;" alt="Naruto Eyes">
+									<span class="badge-tooltiptext">Naruto Eyes</span>
+								  </div>
+								
+    <p class="quote" style="color: #ffffff">
+        scott.#0004
+    </p>
+    
+											<script>
+												function getCookie(name) {
+													const value = `; ${document.cookie}`;
+													const parts = value.split(`; ${name}=`);
+													if (parts.length === 2) return parts.pop().split(';').shift();
+												}
+													
+												function unfollowUser() {
+													let xhr = new XMLHttpRequest();
+													xhr.open('GET', `https://ebio.gg/api/unfollowUser/708322655429853186?token=${getCookie('token')}&uID=${getCookie('uID')}`);
+													xhr.send();
+													location.reload();
+												}
+											</script>
+											<button onclick="unfollowUser()" style="border-width: 0; background-color: rgba(255,255,255,0.89); border-radius: 8px; padding: 4px; font-size: 13px; width: max-content; margin: 5px auto 20px;">
+												<i style="color: black;" class="fa-solid fa-user-check"></i>
+												8 Followers
+											</button>
+										
+     
+</div>
+<div class="wrapper">
+    
+						  <div class="button tiktok" onclick="window.open('https://vt.tiktok.com/ZSdwDtHNn/', '_blank');">
+							<div class="icon">
+								<i class="fab fa-tiktok"></i>
+							</div>
+							<span>tiktok</span>
+						  </div>
+						
+						  <div class="button other" onclick="window.open('https://discord.gg/seas', '_blank');">
+							<div class="icon">
+								<i class="fas fa-link"></i>
+							</div>
+							<span>other</span>
+						  </div>
+						
+</div>
+<div class="footer">
+    <h4><a href="https://discord.gg/ca6T3pEAra"><b>Made @ ebio.gg</b></a></h4>
+</div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"78e256b2ceadbab1","version":"2022.11.3","r":1,"token":"5ed95a16178041949f27faf49d27d54e","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
