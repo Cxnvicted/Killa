@@ -97,44 +97,15 @@ window.onload = function () {
 <style>
 
 
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		font-family: 'Poppins', sans-serif;
-	}
-	html,
-	body {
-		display: grid;
-		height: 100%;
-		width: 100%;
-		place-items: center;
-		background: linear-gradient(315deg, rgb(255, 255, 255) 0%, rgb(235, 235, 235) 74%);
-	}
-	.title {
-		text-align: center;
-	}
-	.title .quote {
-		margin-top: 7px;
-	}
-	.avatar {
-		border: 0px solid #808080;
-		height: 200px;
-		width: 200px;
-		object-fit: cover;
-		border-radius: 50%;
-		position: center;
-		left: 10px;
-	}
-    .status {
-        background-color: #606060;
-        padding: 5px;
-        border-radius: 38px;
-        z-index: 1;
-        position: relative;
-        top: -10px;
-        left: -50px;
-    }
+.click_anywhere {
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);	
+	
+}
 
     .wrapper .button {
         display: inline-block;
@@ -365,6 +336,18 @@ window.onload = function () {
         cursor: pointer;
     }
 </style>
+<div class="clickanywhere premium_border">
+<div class="click_body" style="height:100%;width:100%;">
+<div class="click_anywhere">
+<h4 style="color:white;font-size:12pt;">[Click Anywhere]</h4>
+</div>
+<audio>
+<source src="https://cdn.discordapp.com/attachments/1018078492585377823/1066000952177467472/Vitux_-_Deixa_Escondido_Speed_Official_Music.mp3" type="audio/mpeg">
+<source src="https://cdn.discordapp.com/attachments/1018078492585377823/1066000952177467472/Vitux_-_Deixa_Escondido_Speed_Official_Music.mp3" type="audio/ogg">
+</audio>
+<div id="sounddiv"><bgsound id="sound"></div>
+</div>
+</div>
 <div class="biolink" style="display:none;height:100%;width:100%;">
 <div class="relative w-full h-full px-4 py-16 table">
 <div class="table-cell align-middle text-center">
