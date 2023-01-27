@@ -1,68 +1,111 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" theme="White">
 <head>
-    <script disable-devtool-auto src='js/disable-devtool.min.js'></script>
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <link href="https://northernsi.de/ebiofavicon.ico" rel="icon" type="image/x-icon"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="killa.lol *Federal" property="og:title"/>
-    <meta content="website" property="og:type"/>
-    <meta content="https://killa.lol/" property="og:url"/>
-    <meta content="{avatar_url}" property="og:image"/>
-    <meta content="Federal's Social links and profile." property="og:description"/>
-    <meta content="#2C2F33" name="theme-color">
-    <title>1337</title>
-    <link rel="icon" href="https://cdn.discordapp.com/attachments/1066410151327846410/1066733748378415145/stole20ts.png" type="image/gif" sizes="16x16">
-</head>
+<meta charset="utf-8">
+<title>Federal· (@1337)</title>
+<meta property="og:title" content="Federal (@1337) · Killa.lol">
+<meta name="description" content="Federal">
+<meta property="og:description" content="Federal">
+<meta name="twitter:card" content="summary">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2F3136">
+<style>@import url('//fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');</style>
+<link href="../assets/images/verified.svg" rel="shortcut icon" type="image/x-icon">
+<meta name="twitter:card" content="summary">
+<link href="https://northernsi.de/ebiofavicon.ico" rel="icon" type="image/x-icon"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet"/>
+<link rel="preload" href="https://feds.lol/module/newww/css/app.css" as="style">
+<link rel="stylesheet" href="https://feds.lol/module/newww/main.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<link href="assets/vendors/animation/animate.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link href="assets/vendors/animation/animate.css" rel="stylesheet">
+<script src="./script.js" data-site="IHGLANPG" defer></script>
+<script nonce="241f2893-28aa-4e2e-aaef-bce2f9d63c18">(function(w,d){!function(f,g,h,i){f[h]=f[h]||{};f[h].executed=[];f.zaraz={deferred:[],listeners:[]};f.zaraz.q=[];f.zaraz._f=function(j){return function(){var k=Array.prototype.slice.call(arguments);f.zaraz.q.push({m:j,a:k})}};for(const l of["track","set","debug"])f.zaraz[l]=f.zaraz._f(l);f.zaraz.init=()=>{var m=g.getElementsByTagName(i)[0],n=g.createElement(i),o=g.getElementsByTagName("title")[0];o&&(f[h].t=g.getElementsByTagName("title")[0].text);f[h].x=Math.random();f[h].w=f.screen.width;f[h].h=f.screen.height;f[h].j=f.innerHeight;f[h].e=f.innerWidth;f[h].l=f.location.href;f[h].r=g.referrer;f[h].k=f.screen.colorDepth;f[h].n=g.characterSet;f[h].o=(new Date).getTimezoneOffset();if(f.dataLayer)for(const s of Object.entries(Object.entries(dataLayer).reduce(((t,u)=>({...t[1],...u[1]})))))zaraz.set(s[0],s[1],{scope:"page"});f[h].q=[];for(;f.zaraz.q.length;){const v=f.zaraz.q.shift();f[h].q.push(v)}n.defer=!0;for(const w of[localStorage,sessionStorage])Object.keys(w||{}).filter((y=>y.startsWith("_zaraz_"))).forEach((x=>{try{f[h]["z_"+x.slice(7)]=JSON.parse(w.getItem(x))}catch{f[h]["z_"+x.slice(7)]=w.getItem(x)}}));n.referrerPolicy="origin";n.src="/ventryshield/contents.js?z="+btoa(encodeURIComponent(JSON.stringify(f[h])));m.parentNode.insertBefore(n,m)};["complete","interactive"].includes(g.readyState)?zaraz.init():f.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
+<body class="fedslol">
+<script>
+
+var TxtType = function (el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = "";
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function () {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+  var that = this;
+  var delta = 200 - Math.random() * 100;
+
+  if (this.isDeleting) {
+    delta /= 2;
+  }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === "") {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function () {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function () {
+  var elements = document.getElementsByClassName("typewrite");
+  for (var i = 0; i < elements.length; i++) {
+    var toRotate = elements[i].getAttribute("data-type");
+    var period = elements[i].getAttribute("data-period");
+    if (toRotate) {
+      new TxtType(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+  document.body.appendChild(css);
+};
+
+
+</script>
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+	.max-w-\[1100px\] {
+	
+		width:500px
+	}
+		</style>
+<main style="">
+<div class="fixed w-full h-full" style="background-image:linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('https://cdn.discordapp.com/attachments/1004849202507038804/1061448840676384900/IMG_4146.gif'); background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: fixed; background-position: center;"></div>
+<style>
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
 
-    html,
-    body {
-        display: grid;
-        height: 100%;
-        width: 100%;
-        place-items: center;
-        {background_placeholder}
-    }
+.click_anywhere {
 
-    .title {
-        text-align: center;
-    }
-
-    .title .quote {
-        margin-top: 5px;
-    }
-
-    .avatar {
-        border: 5px solid #23272A;
-        height: 200px;
-        width: 200px;
-        object-fit: cover;
-        border-radius: 50%;
-        position: relative;
-        left: 10px;
-    }
-
-    .status {
-        background-color: #23272A;
-        padding: 5px;
-        border-radius: 38px;
-        z-index: 1;
-        position: relative;
-        top: -10px;
-        left: -50px;
-    }
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);	
+	
+}
 
     .wrapper .button {
         display: inline-block;
@@ -71,7 +114,7 @@
         float: left;
         margin: 0 5px;
         overflow: hidden;
-        background: rgb(111, 111, 111);
+        background: rgb(50, 50, 50);
         border-radius: 51px;
         cursor: pointer;
         box-shadow: 0px 10px 10px rgb(0, 0, 0);
@@ -111,7 +154,7 @@
         line-height: 60px;
         margin-left: 10px;
         transition: all 0.3s ease-out;
-        color: black;
+        color: rgb(255, 255, 255);
     }
 
     .footer p, h4, a {
@@ -125,75 +168,75 @@
     */
 
     .wrapper .button.discord:hover .icon {
-        background: #5865F2;
+        background: #303030;
     }
 
     .wrapper .button.discord span {
-        color: #5865F2;
+        color: #303030;
     }
 
     .wrapper .button.github:hover .icon {
-        background: #333;
+        background: #303030;
     }
 
     .wrapper .button.github span {
-        color: #333;
+        color: #303030;
     }
 
     .wrapper .button.tiktok:hover .icon {
-        background: #000000;
+        background: #303030;
     }
 
     .wrapper .button.tiktok span {
-        color: #000000;
+        color: #303030;
     }
 
     .wrapper .button.youtube:hover .icon {
-        background: #c4302b;
+        background: #303030;
     }
 
     .wrapper .button.youtube span {
-        color: #c4302b;
+        color: #303030;
     }
 
     .wrapper .button.twitch:hover .icon {
-        background: #6441a5;
+        background: #303030;
     }
 
     .wrapper .button.twitch span {
-        color: #6441a5;
+        color: #303030;
     }
 
     .wrapper .button.twitter:hover .icon {
-        background: #00acee;
+        background: #303030;
     }
 
     .wrapper .button.twitter span {
-        color: #00acee;
+        color: #303030;
     }
 
     .wrapper .button.snapchat:hover .icon {
-        background: #FFFC00;
+        background: #303030;
     }
 
     .wrapper .button.snapchat span {
-        color: #FFFC00;
+        color: #303030;
     }
 
     .wrapper .button.steam:hover .icon {
-        background: #1b2838;
+        background: #303030;
     }
 
     .wrapper .button.steam span {
-        color: #1b2838;
+        color: #303030;
     }
 
     .wrapper .button.instagram:hover .icon {
-        background: #C13584;
+        background: #303030;
     }
 
     .wrapper .button.instagram span {
-        color: #C13584;
+        color: #303030;
     }
 
     .wrapper .button.facebook:hover .icon {
@@ -201,47 +244,47 @@
     }
 
     .wrapper .button.facebook span {
-        color: #4267B2;
+        color: #4353ff
     }
 
     .wrapper .button.spotify:hover .icon {
-        background: #1DB954;
+        background: #303030;
     }
 
     .wrapper .button.spotify span {
-        color: #1DB954;
+        color: #303030;
     }
 
     .wrapper .button.reddit:hover .icon {
-        background: #FF5700;
+        background: #303030;
     }
 
     .wrapper .button.reddit span {
-        color: #FF5700;
+        color: #303030;
     }
 
     .wrapper .button.soundcloud:hover .icon {
-        background: #ff5500;
+        background: #303030;
     }
 
     .wrapper .button.soundcloud span {
-        color: #ff5500;
+        color: #303030;
     }
 
     .wrapper .button.pinterest:hover .icon {
-        background: #cc0000;
+        background: #303030;
     }
 
     .wrapper .button.pinterest span {
-        color: #cc0000;
+        color: #303030;
     }
 
     .wrapper .button:hover .icon {
-        background: #4078c0;
+        background: #303030;
     }
 
     .wrapper .button span {
-        color: #4078c0;
+        color: #303030;
     }
 
     .badge {
@@ -292,274 +335,124 @@
         color: white;
         cursor: pointer;
     }
-
-    .typewriter-text1 {
-    animation-name: typewriter1;
-    }
-    
-    
-    
-    .typewriter-text1{
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    position: relative;
-    animation-duration: 15s;
-    animation-timing-function: steps(45, end);
-    animation-iteration-count: infinite;
-    }
-    
-    .typewriter-text1::after {
-    content: "|";
-    position: absolute;
-    animation: caret infinite;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(1, end);
-    }
-    
-    @keyframes typewriter1 {
-    0%,
-    50%,
-    100% {
-     width: 0;
-    }
-    10%,
-    40% {
-     width: 25em;
-    }
-    }
-    
-    @keyframes caret {
-    0%,
-    100% {
-     opacity: 0;
-    }
-    50% {
-     opacity: 1;
-    }
-    }
- </style>   
-<body style="background-image: url('https://cdn.discordapp.com/attachments/1068276158103306313/1068281469560164414/julius-drost-Ariu17epnPk-unsplash.png'); background-size: cover;">
-<div class="title">
-<div class="title-img">
-<center><img alt="Avatar" class="avatar" style="position: center;" src="https://cdn.discordapp.com/attachments/1068276158103306313/1068280814699299026/tateee.jpg">
-    <center><h1 class="owner" style="display: inline-block; text-shadow: 0px 1px 1px ;font-family: 'PF Tempesta Five', sans-serif; color: #fff; text-align: center; background-image: url('https://media.discordapp.net/attachments/1067132384492933131/1067429875717263380/sparkle_black.gif');">1337</h1>
-<center><p class="quote" style="color: #ffffff">
-Killa.lol/1337
-</p>  
-								  <div class="badge">
-									<img src="https://cdn.discordapp.com/emojis/1067121743380090960.webp?size=80&quality=lossless" style="width: 20px; height: 20px;" alt="Alpha User">
-									<span class="badge-tooltiptext">Alpha user</span>
-								  </div>
-								 
-    <center><p class="quote" style="color: #ffffff">
-        federal#1444
-    </p>
+</style>
+<div class="clickanywhere premium_border">
+<div class="click_body" style="height:100%;width:100%;">
+<div class="click_anywhere">
+<h4 style="color:white;font-size:12pt;">1337</h4>
 </div>
-<div class="wrapper">
+<audio>
+<source src="https://cdn.discordapp.com/attachments/1068276158103306313/1068621639098576976/Lil_Mabu_-_GRINCHMAS_Official_Music_Video_Christmas_Drill_Song.mp3" type="audio/mpeg">
+<source src="https://cdn.discordapp.com/attachments/1068276158103306313/1068621639098576976/Lil_Mabu_-_GRINCHMAS_Official_Music_Video_Christmas_Drill_Song.mp3" type="audio/ogg">
+</audio>
+<div id="sounddiv"><bgsound id="sound"></div>
+</div>
+</div>
+<div class="biolink" style="display:none;height:100%;width:100%;">
+<div class="relative w-full h-full px-4 py-16 table">
+<div class="table-cell align-middle text-center">
+<div class="bg-main rounded-md shadow-4xl w-full mx-auto card animate-slide-up not-last-child:mb-12 max-w-[1100px] mt-14">
+<div class="p-10">
+<div class="not-last-child:mb-8">
+<div class="-mt-[85px]">
+<img class="w-44 h-44 rounded-full mx-auto shadow-avatar" src="https://cdn.discordapp.com/attachments/1004849202507038804/1061444640659734528/IMG_4140.jpg" title="Image" alt="Image" draggable="false" /> </div>
+</div>
+<div class="not-last-child:mb-8">
+<div class="flex justify-center items-center space-x-2">
+<h2 class="text-[20px] text-white font-semibold" style="color: #fff; background-image: url('https://media.discordapp.net/attachments/1067132384492933131/1067429877243981855/sparkle_rainbow.gif');filter: drop-shadow(8px 8px 10px #ffffff);color:#ffffff;">1337</h2>
+</div>
+								  <div class="badge">
+									<img src="https://cdn.discordapp.com/emojis/1067121743380090960.webp?size=80&quality=lossless" style="width: 19px; height: 19px;" alt="Premium">
+									<span class="badge-tooltiptext">Premium</span>
+								  </div>
 
+                                  <div class="badge">
+									<img src="https://cdn.discordapp.com/emojis/921533453160292433.webp" style="width: 19px; height: 19px;" alt="Verified">
+									<span class="badge-tooltiptext">Verified</span>
+								  </div>
+                                  
+                                  <div class="badge">
+                                    <img src="https://cdn.discordapp.com/emojis/1051876319090192424.gif?size=80&quality=lossless" style="width: 20px; height: 20px;" alt="Bitcoin">
+                                    <span class="badge-tooltiptext">Doxbin</span>
+                                  </div>
+                             </div>
+<p class="text-sm">
+</em>killa.lol/1337</em>
+<div class="wrapper">
+    
 						  <div class="button other" onclick="window.open('https://www.roblox.com/users/1317669874/profile', '_blank');">
 							<div class="icon">
-								<i class="fas fa-link"></i>
+                <i class="fas fa-link"></i>
 							</div>
 							<span>Roblox</span>
 						  </div>
 						
 						  <div class="button github" onclick="window.open('https://github.com/1aylol', '_blank');">
 							<div class="icon">
-								<i class="fab fa-github"></i>
+                <i class="fab fa-github"></i>
 							</div>
-							<span>Github</span>
+							<span>github</span>
 						  </div>
-						
-						
+
+              <div class="button doxbin" onclick="window.open('https://doxbin.org/user/beamblock ', '_blank');">
+							<div class="icon">
+                <img src="https://cdn.discordapp.com/attachments/1004849202507038804/1054129127235518524/cdox.png" style="width: 60px; height: 60px;" alt="Owner">
+							</div>
+							<span>doxbin</span>
+						  </div>		
 </div>
-</div></center><br><br>
+<div class="flex justify-center items-center space-x-2">
+<div style="text-align: center;">
 <a href="https://discord.com/users/787176081005477889" target="_blank">
-<img src="https://discord.c99.nl/widget/theme-4/787176081005477889.png" style="
-width: 300px;"></a>
-<div class="footer">
-    <h4><a href="https://killa.lol/"><b>root@Killa.lol</b></a></h4>
+<img src="https://discord.c99.nl/widget/theme-4/787176081005477889.png" style="width: 300px;"></a>
 </div>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"78e256b2ceadbab1","version":"2022.11.3","r":1,"token":"5ed95a16178041949f27faf49d27d54e","si":100}' crossorigin="anonymous"></script>
+</div>
+</div>
+</main>
+<script src="/js/page.js?id=2c4f84bac56c0ce1881f"></script>
+<script>
+
+function playclip() {
+if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.indexOf("MSIE 7")!=-1) || (navigator.appVersion.indexOf("MSIE 8")!=-1)) {
+if (document.all)
+ {
+  document.all.sound.src = "song.mp3";
+ }
+}
+
+else {
+{
+var audio = document.getElementsByTagName("audio")[0];
+audio.play();
+}
+}
+}
+
+document.querySelector('.fedslol').addEventListener('click', function() {
+  
+  playclip();
+});
+
+$(document).ready(function () {
+	$( document.body ).click(function() {
+	$(".clickanywhere").fadeOut(1000);
+    $(".biolink").fadeIn(1000);
+
+	let play = function(){document.getElementById("audio").play()}
+	
+	
+
+	
+	});
+});
+                       
+var _old = jQuery.Event.prototype.stopPropagation;
+
+jQuery.Event.prototype.stopPropagation = function() {
+    this.target.nodeName !== 'SPAN' && _old.apply( this, arguments );
+};             
+
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"78ffaafc1df76f49","token":"033c33a962e74d16be982c1223e03590","version":"2022.11.3","si":100}' crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-<style>
-    /* customizable snowflake styling */
-    .snowflake {
-      color: hwb(0 100% 0%);
-      font-size: 1em;
-      font-family: Arial, sans-serif;
-      text-shadow: 0 0 5px rgb(302 74% 0%);
-    }
-    
-   @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
-     </style>
-     <div class="snowflakes" aria-hidden="true">
-       <div class="snowflake">
-       
-       </div>
-       <div class="snowflake">
-          
-       </div>
-       <div class="snowflake">
-          
-       </div>
-       <div class="snowflake">
-          
-       </div>
-       <div class="snowflake">
-         . 
-       </div>
-       <div class="snowflake">
-          
-       </div>
-       <div class="snowflake">
-          .
-       </div>
-       <div class="snowflake">
-          
-       </div>
-       <div class="snowflake">
-          
-       </div>
-       <div class="snowflake">
-          
-       </div>
-       <div class="snowflake">
-          .
-       </div>
-       <div class="snowflake">
-       
-       </div>
-     </div>
-     <div>
-   
-       <div>
-         <button id="button" style="color:hwb(0 100% 0%); font-family:'Courier New', Courier, monospace; border: none; margin: 0; background-color: #000000; position: absolute; top: 50%;left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; height: 100%;" onclick="playAudio();document.getElementById('button').hidden=true;document.getElementById('site').hidden=false">   
-     <div class="center">
-     <pre>
-                                       ⸸ Federal @                                 
-   </button>
-   </pre>
-       </div>
-    
-          </div>
-     <script>
-       document.onkeydown = function(e) {
-       if(event.keyCode == 123) {
-           return false;
-       }
-       if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-           return false;
-       }
-       if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-           return false;
-       }
-       if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-           return false;
-       }
-       if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-           return false;
-       }
-       }
-       document.addEventListener('contextmenu', function(e) {
-       e.preventDefault();
-       });
-       document.getElementById('site').hidden=true
-       function playAudio() {
-           myAudio = new Audio('audio22forglhf.mp3'); 
-           if (typeof myAudio.loop == 'boolean')
-           {
-               myAudio.loop = true;
-           }
-           else
-           {
-               myAudio.addEventListener('ended', function() {
-                   this.currentTime = 0;
-                   this.play();
-               }, false);
-           }
-           myAudio.play();
-       }
-     </script>
-   
-   <script>
-
- 
-	function getRandomInt(max) {
-	 return Math.floor(Math.random() * Math.floor(max));
-	}
-	
-	function type() {
-	 let strs = [ 
-	 <span style="font-weight: bold;text-shadow: 0 0 5px hwb(0 0% 87%);">
-   GET FUCKING KILLED 
-	 </span>
-	];
-	
-	var num = getRandomInt(strs.length);
-	
-	var typElement = document.getElementById('typElement');
-	
-	var typewriter = new Typewriter(typElement, {
-	 loop: true
-	});
-	
-	typewriter.typeString(strs[num]).pauseFor(5000).deleteAll().pauseFor(100).callFunction(() => {
-	 typewriter.stop();
-	 type();
-	}).start();
-	}
-	</script>
-	
-	<script>
-	type()
-	</script>
-	 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-	
-	<script>
-	
-	$(document).ready(function(){
-	  var string = $.trim($('p').text());
-	  string = string.replace(/\(([^)]+)\)/, "<span>$1</span>");
-	  $('p').html(string);
-	});
-	
-	function getRandomInt(max) {
-		return Math.floor(Math.random() * Math.floor(max));
-	}
-	
-	function type() {
-		let strs = [
-			  "g32323",
-	];
-   
-	var num = getRandomInt(strs.length);
-	
-	var typElement = document.getElementById('typElement');
-	
-	var typewriter = new Typewriter(typElement, {
-		loop: true
-	});
-	
-	typewriter.typeString(strs[num]).pauseFor(500).deleteAll().pauseFor(10).callFunction(() => {
-		typewriter.stop();
-		type();
-	}).start();
-	}
-	</script>
-	
-	<style>
-	span{
-	font-weight: bold;
-	text-shadow: 0 0 5px hwb(0 100% 0%);
-	}
-	</style>
-	
-	<script>
-	type()
-	</script>
-</div>
