@@ -11,6 +11,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#2F3136">
+<style>@import url('//fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');</style>
 <link href="../assets/images/verified.svg" rel="shortcut icon" type="image/x-icon">
 <meta name="twitter:card" content="summary">
 <link rel="preload" href="https://feds.lol/module/newww/css/app.css" as="style">
@@ -106,8 +107,273 @@ window.onload = function () {
 	
 }
 
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Poppins', sans-serif;
+	}
+	html,
+	body {
+		display: grid;
+		height: 100%;
+		width: 100%;
+		place-items: center;
+		background: linear-gradient(315deg, rgb(255, 255, 255) 0%, rgb(235, 235, 235) 74%);
+	}
+	.title {
+		text-align: center;
+	}
+	.title .quote {
+		margin-top: 7px;
+	}
+	.avatar {
+		border: 0px solid #808080;
+		height: 200px;
+		width: 200px;
+		object-fit: cover;
+		border-radius: 50%;
+		position: center;
+		left: 10px;
+	}
+    .status {
+        background-color: #606060;
+        padding: 5px;
+        border-radius: 38px;
+        z-index: 1;
+        position: relative;
+        top: -10px;
+        left: -50px;
+    }
+
+    .wrapper .button {
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        float: left;
+        margin: 0 5px;
+        overflow: hidden;
+        background: rgb(135, 167, 250);
+        border-radius: 51px;
+        cursor: pointer;
+        box-shadow: 0px 10px 10px rgb(0, 0, 0);
+        transition: all 0.3s ease-out;
+        color: black;
+    }
+
+    .wrapper .button:hover {
+        width: 200px;
+        color: black;
+    }
+
+    .wrapper .button .icon {
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        border-radius: 500px;
+        box-sizing: border-box;
+        line-height: 60px;
+        transition: all 0.3s ease-out;
+    }
+
+    .wrapper .button .icon i {
+        font-size: 25px;
+        line-height: 60px;
+        transition: all 0.3s ease-out;
+    }
+
+    .wrapper .button:hover .icon i {
+        color: #fff;
+    }
+
+    .wrapper .button span {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-left: 10px;
+        transition: all 0.3s ease-out;
+        color: black;
+    }
+
+    .footer p, h4, a {
+        text-align: center;
+        color: white;
+    }
 
 
+    /*
+    --------------------------------------------
+    */
+
+    .wrapper .button.discord:hover .icon {
+        background: #303030;
+    }
+
+    .wrapper .button.discord span {
+        color: #303030;
+    }
+
+    .wrapper .button.github:hover .icon {
+        background: #303030;
+    }
+
+    .wrapper .button.github span {
+        color: #303030;
+    }
+
+    .wrapper .button.tiktok:hover .icon {
+        background: #303030;
+    }
+
+    .wrapper .button.tiktok span {
+        color: #303030;
+    }
+
+    .wrapper .button.youtube:hover .icon {
+        background: #303030;
+    }
+
+    .wrapper .button.youtube span {
+        color: #303030;
+    }
+
+    .wrapper .button.twitch:hover .icon {
+        background: #303030;
+    }
+
+    .wrapper .button.twitch span {
+        color: #303030;
+    }
+
+    .wrapper .button.twitter:hover .icon {
+        background: #303030;
+    }
+
+    .wrapper .button.twitter span {
+        color: #303030;
+    }
+
+    .wrapper .button.snapchat:hover .icon {
+        background: #303030;
+    }
+
+    .wrapper .button.snapchat span {
+        color: #303030;
+    }
+
+    .wrapper .button.steam:hover .icon {
+        background: #303030;
+    }
+
+    .wrapper .button.steam span {
+        color: #303030;
+    }
+
+    .wrapper .button.instagram:hover .icon {
+        background: #303030;
+    }
+
+    .wrapper .button.instagram span {
+        color: #303030;
+    }
+
+    .wrapper .button.facebook:hover .icon {
+        background: #4267B2;
+    }
+
+    .wrapper .button.facebook span {
+        color: #4353ff
+    }
+
+    .wrapper .button.spotify:hover .icon {
+        background: #303030;
+    }
+
+    .wrapper .button.spotify span {
+        color: #303030;
+    }
+
+    .wrapper .button.reddit:hover .icon {
+        background: #303030;
+    }
+
+    .wrapper .button.reddit span {
+        color: #303030;
+    }
+
+    .wrapper .button.soundcloud:hover .icon {
+        background: #303030;
+    }
+
+    .wrapper .button.soundcloud span {
+        color: #303030;
+    }
+
+    .wrapper .button.pinterest:hover .icon {
+        background: #303030;
+    }
+
+    .wrapper .button.pinterest span {
+        color: #303030;
+    }
+
+    .wrapper .button:hover .icon {
+        background: #303030;
+    }
+
+    .wrapper .button span {
+        color: #303030;
+    }
+
+    .badge {
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width: 28px;
+    }
+
+    .badge .badge-tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .badge .badge-tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+
+    .badge:hover .badge-tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .editBtn {
+        background-color: #282828;
+        background-size: cover;
+        border-radius: 7px;
+        padding: 8px;
+        color: white;
+        cursor: pointer;
+    }
 </style>
 <div class="clickanywhere premium_border">
 <div class="click_body" style="height:100%;width:100%;">
@@ -180,67 +446,6 @@ killa.lol/<em>$</em>
 <span class="bg-secondary rounded-xl aspect-square h-16 p-3 flex items-center justify-center">
 <img class="drop-shadow-instagram" src="https://feds.lol/module/newww/icons/instagram.svg">
 </span>
-<h2 class="w-full text-left text-grey">
-Instagram
-</h2>
-<span class="w-20" style="margin-left: 46px;">
-<img src="../assets/images/link-button-arrow.svg" style="width: 14px;" class="link-arrows">
-</span>
-</div>
-</a>
-<a href="https://www.twitter.com/wryxse" target="_blank" rel="noopener noreferrer nofollow" title="https://www.twitter.com/wryxse" class="bg-main rounded-xl flex-[100%] sm:flex-[45%] animate-slide-up shadow-4xl p-3 button" style="will-change: opacity, transform">
-<div class="flex items-center justify-between space-x-6">
-<span class="bg-secondary rounded-xl aspect-square h-16 p-3 flex items-center justify-center">
-<img class="drop-shadow-twitter" src="https://feds.lol/module/newww/icons/twitter.svg">
-</span>
-<h2 class="w-full text-left text-grey">
-Twitter
-</h2>
-<span class="w-20" style="margin-left: 46px;">
-<img src="../assets/images/link-button-arrow.svg" style="width: 14px;" class="link-arrows">
-</span>
-</div>
-</a>
-<a href="https://www.discord.gg/annoy" target="_blank" rel="noopener noreferrer nofollow" title="https://www.discord.gg/annoy" class="bg-main rounded-xl flex-[100%] sm:flex-[45%] animate-slide-up shadow-4xl p-3 button" style="will-change: opacity, transform">
-<div class="flex items-center justify-between space-x-6">
-<span class="bg-secondary rounded-xl aspect-square h-16 p-3 flex items-center justify-center">
-<img class="drop-shadow-twitter" src="https://feds.lol/module/newww/icons/discord.svg">
-</span>
-<h2 class="w-full text-left text-grey">
-Discord
-</h2>
- <span class="w-20" style="margin-left: 46px;">
-<img src="../assets/images/link-button-arrow.svg" style="width: 14px;" class="link-arrows">
-</span>
-</div>
-</a>
-<a href="https://youtube.com/OutcastHaunt" target="_blank" rel="noopener noreferrer nofollow" title="https://youtube.com/OutcastHaunt" class="bg-main rounded-xl flex-[100%] sm:flex-[45%] animate-slide-up shadow-4xl p-3 button" style="will-change: opacity, transform">
-<div class="flex items-center justify-between space-x-6">
-<span class="bg-secondary rounded-xl aspect-square h-16 p-3 flex items-center justify-center">
-<img class="drop-shadow-youtube" src="https://feds.lol/module/newww/icons/youtube.svg">
-</span>
-<h2 class="w-full text-left text-grey">
-Youtube
-</h2>
-<span class="w-20" style="margin-left: 46px;">
-<img src="../assets/images/link-button-arrow.svg" style="width: 14px;" class="link-arrows">
-</span>
-</div>
-</a>
-<a href="https://ogu.gg/haunt" target="_blank" rel="noopener noreferrer nofollow" title="https://ogu.gg/haunt" class="bg-main rounded-xl flex-[100%] sm:flex-[45%] animate-slide-up shadow-4xl p-3 button" style="will-change: opacity, transform">
-<div class="flex items-center justify-between space-x-6">
-<span class="bg-secondary rounded-xl aspect-square h-16 p-3 flex items-center justify-center">
-<img class="drop-shadow-paypal" src="https://feds.lol/module/newww/icons/ogu.svg">
-</span>
-<h2 class="w-full text-left text-grey">
-Ogu
-</h2>
-<span class="w-20" style="margin-left: 46px;">
-<img src="../assets/images/link-button-arrow.svg" style="width: 14px;" class="link-arrows">
-</span>
-</div>
-</a>
-</div>
 </div>
 </div>
 </div>
