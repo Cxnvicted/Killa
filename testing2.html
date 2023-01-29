@@ -1,460 +1,51 @@
 
-
 <!DOCTYPE html>
-<html lang="en" theme="White">
-
-<head>
-<meta charset="utf-8">
-<title>duh (@duh) · feds.lol</title>
-<meta property="og:title" content="duh (@duh) · feds.lol">
-<meta name="description" content="duh">
-<meta property="og:description" content="duh">
-<meta name="twitter:card" content="summary">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#2F3136">
-<link href="../assets/images/verified.svg" rel="shortcut icon" type="image/x-icon">
-<meta name="twitter:card" content="summary">
-<link rel="preload" href="https://feds.lol/module/newww/css/app.css" as="style">
-<link rel="stylesheet" href="https://feds.lol/module/newww/main.css">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-<link href="assets/vendors/animation/animate.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<link href="assets/vendors/animation/animate.css" rel="stylesheet">
-<script src="./script.js" data-site="IHGLANPG" defer></script>
-<script nonce="dffaf974-c9e7-4f5c-9d23-72df619e8d11">(function(w,d){!function(f,g,h,i){f[h]=f[h]||{};f[h].executed=[];f.zaraz={deferred:[],listeners:[]};f.zaraz.q=[];f.zaraz._f=function(j){return function(){var k=Array.prototype.slice.call(arguments);f.zaraz.q.push({m:j,a:k})}};for(const l of["track","set","debug"])f.zaraz[l]=f.zaraz._f(l);f.zaraz.init=()=>{var m=g.getElementsByTagName(i)[0],n=g.createElement(i),o=g.getElementsByTagName("title")[0];o&&(f[h].t=g.getElementsByTagName("title")[0].text);f[h].x=Math.random();f[h].w=f.screen.width;f[h].h=f.screen.height;f[h].j=f.innerHeight;f[h].e=f.innerWidth;f[h].l=f.location.href;f[h].r=g.referrer;f[h].k=f.screen.colorDepth;f[h].n=g.characterSet;f[h].o=(new Date).getTimezoneOffset();if(f.dataLayer)for(const s of Object.entries(Object.entries(dataLayer).reduce(((t,u)=>({...t[1],...u[1]})))))zaraz.set(s[0],s[1],{scope:"page"});f[h].q=[];for(;f.zaraz.q.length;){const v=f.zaraz.q.shift();f[h].q.push(v)}n.defer=!0;for(const w of[localStorage,sessionStorage])Object.keys(w||{}).filter((y=>y.startsWith("_zaraz_"))).forEach((x=>{try{f[h]["z_"+x.slice(7)]=JSON.parse(w.getItem(x))}catch{f[h]["z_"+x.slice(7)]=w.getItem(x)}}));n.referrerPolicy="origin";n.src="/ventryshield/contents.js?z="+btoa(encodeURIComponent(JSON.stringify(f[h])));m.parentNode.insertBefore(n,m)};["complete","interactive"].includes(g.readyState)?zaraz.init():f.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
-<body class="fedslol">
-<script>
-
-var TxtType = function (el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.txt = "";
-  this.tick();
-  this.isDeleting = false;
-};
-
-TxtType.prototype.tick = function () {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
-
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
-
-  this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-
-  var that = this;
-  var delta = 200 - Math.random() * 100;
-
-  if (this.isDeleting) {
-    delta /= 2;
-  }
-
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === "") {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-  }
-
-  setTimeout(function () {
-    that.tick();
-  }, delta);
-};
-
-window.onload = function () {
-  var elements = document.getElementsByClassName("typewrite");
-  for (var i = 0; i < elements.length; i++) {
-    var toRotate = elements[i].getAttribute("data-type");
-    var period = elements[i].getAttribute("data-period");
-    if (toRotate) {
-      new TxtType(elements[i], JSON.parse(toRotate), period);
-    }
-  }
-  // INJECT CSS
-  var css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-  document.body.appendChild(css);
-};
-
-
-</script>
-<style>
-	.max-w-\[1100px\] {
-	
-		width:500px
-	}
-		</style>
-<main style="">
-<div class="fixed w-full h-full" style="background-image:linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('https://cdn.discordapp.com/attachments/1004849202507038804/1061448840676384900/IMG_4146.gif'); background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: fixed; background-position: center;"></div>
-<style>
-
-
-.click_anywhere {
-
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);	
-	
-}
-
-    .wrapper .button {
-        display: inline-block;
-        height: 60px;
-        width: 60px;
-        float: left;
-        margin: 0 5px;
-        overflow: hidden;
-        background: rgb(50, 50, 50);
-        border-radius: 51px;
-        cursor: pointer;
-        box-shadow: 0px 10px 10px rgb(0, 0, 0);
-        transition: all 0.3s ease-out;
-        color: black;
-    }
-
-    .wrapper .button:hover {
-        width: 200px;
-        color: black;
-    }
-
-    .wrapper .button .icon {
-        display: inline-block;
-        height: 60px;
-        width: 60px;
-        text-align: center;
-        border-radius: 500px;
-        box-sizing: border-box;
-        line-height: 60px;
-        transition: all 0.3s ease-out;
-    }
-
-    .wrapper .button .icon i {
-        font-size: 25px;
-        line-height: 60px;
-        transition: all 0.3s ease-out;
-    }
-
-    .wrapper .button:hover .icon i {
-        color: #fff;
-    }
-
-    .wrapper .button span {
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 60px;
-        margin-left: 10px;
-        transition: all 0.3s ease-out;
-        color: rgb(255, 255, 255);
-    }
-
-    .footer p, h4, a {
-        text-align: center;
-        color: white;
-    }
-
-
-    /*
-    --------------------------------------------
-    */
-
-    .wrapper .button.discord:hover .icon {
-        background: #303030;
-    }
-
-    .wrapper .button.discord span {
-        color: #303030;
-    }
-
-    .wrapper .button.github:hover .icon {
-        background: #303030;
-    }
-
-    .wrapper .button.github span {
-        color: #303030;
-    }
-
-    .wrapper .button.tiktok:hover .icon {
-        background: #303030;
-    }
-
-    .wrapper .button.tiktok span {
-        color: #303030;
-    }
-
-    .wrapper .button.youtube:hover .icon {
-        background: #303030;
-    }
-
-    .wrapper .button.youtube span {
-        color: #303030;
-    }
-
-    .wrapper .button.twitch:hover .icon {
-        background: #303030;
-    }
-
-    .wrapper .button.twitch span {
-        color: #303030;
-    }
-
-    .wrapper .button.twitter:hover .icon {
-        background: #303030;
-    }
-
-    .wrapper .button.twitter span {
-        color: #303030;
-    }
-
-    .wrapper .button.snapchat:hover .icon {
-        background: #303030;
-    }
-
-    .wrapper .button.snapchat span {
-        color: #303030;
-    }
-
-    .wrapper .button.steam:hover .icon {
-        background: #303030;
-    }
-
-    .wrapper .button.steam span {
-        color: #303030;
-    }
-
-    .wrapper .button.instagram:hover .icon {
-        background: #303030;
-    }
-
-    .wrapper .button.instagram span {
-        color: #303030;
-    }
-
-    .wrapper .button.facebook:hover .icon {
-        background: #4267B2;
-    }
-
-    .wrapper .button.facebook span {
-        color: #4353ff
-    }
-
-    .wrapper .button.spotify:hover .icon {
-        background: #303030;
-    }
-
-    .wrapper .button.spotify span {
-        color: #303030;
-    }
-
-    .wrapper .button.reddit:hover .icon {
-        background: #303030;
-    }
-
-    .wrapper .button.reddit span {
-        color: #303030;
-    }
-
-    .wrapper .button.soundcloud:hover .icon {
-        background: #303030;
-    }
-
-    .wrapper .button.soundcloud span {
-        color: #303030;
-    }
-
-    .wrapper .button.pinterest:hover .icon {
-        background: #303030;
-    }
-
-    .wrapper .button.pinterest span {
-        color: #303030;
-    }
-
-    .wrapper .button:hover .icon {
-        background: #303030;
-    }
-
-    .wrapper .button span {
-        color: #303030;
-    }
-
-    .badge {
-        position: relative;
-        display: inline-block;
-        height: 28px;
-        width: 28px;
-    }
-
-    .badge .badge-tooltiptext {
-        visibility: hidden;
-        width: 120px;
-        background-color: #555;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px 0;
-        position: absolute;
-        z-index: 1;
-        bottom: 125%;
-        left: 50%;
-        margin-left: -60px;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .badge .badge-tooltiptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-    }
-
-    .badge:hover .badge-tooltiptext {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .editBtn {
-        background-color: #282828;
-        background-size: cover;
-        border-radius: 7px;
-        padding: 8px;
-        color: white;
-        cursor: pointer;
-    }
-</style>
-<div class="clickanywhere premium_border">
-<div class="click_body" style="height:100%;width:100%;">
-<div class="click_anywhere">
-<h4 style="color:white;font-size:12pt;">$</h4>
-</div>
-<audio>
-<source src="https://cdn.discordapp.com/attachments/1018078492585377823/1066000952177467472/Vitux_-_Deixa_Escondido_Speed_Official_Music.mp3" type="audio/mpeg">
-<source src="https://cdn.discordapp.com/attachments/1018078492585377823/1066000952177467472/Vitux_-_Deixa_Escondido_Speed_Official_Music.mp3" type="audio/ogg">
-</audio>
-<div id="sounddiv"><bgsound id="sound"></div>
-</div>
-</div>
-<div class="biolink" style="display:none;height:100%;width:100%;">
-<div class="relative w-full h-full px-4 py-16 table">
-<div class="table-cell align-middle text-center">
-<div class="bg-main rounded-md shadow-4xl w-full mx-auto card animate-slide-up not-last-child:mb-12 max-w-[1100px] mt-14">
-<div class="p-10">
-<div class="not-last-child:mb-8">
-<div class="-mt-[85px]">
-<img class="w-44 h-44 rounded-full mx-auto shadow-avatar" src="https://cdn.discordapp.com/attachments/1004849202507038804/1061444640659734528/IMG_4140.jpg" title="Image" alt="Image" draggable="false" /> </div>
-</div>
-<div class="not-last-child:mb-8">
-<div class="flex justify-center items-center space-x-2">
-<h2 class="text-[20px] text-white font-semibold" style="color: #fff; background-image: url('https://media.discordapp.net/attachments/987149728800198686/991834200309248070/sparkle.gif');filter: drop-shadow(8px 8px 10px #ffffff);color:#ffffff;">مدان</h2>
-</div>
-								  <div class="badge">
-									<img src="https://cdn.discordapp.com/emojis/921533453160292433.webp" style="width: 19px; height: 19px;" alt="Verified">
-									<span class="badge-tooltiptext">Verified</span>
-								  </div>
-								
-
-                                  <div class="badge">
-									<img src="https://cdn.discordapp.com/emojis/970888425634938941.webp?size=80&quality=lossless" style="width: 19px; height: 19px;" alt="Owner">
-									<span class="badge-tooltiptext">Owner</span>
-								  </div>
-
-                <div class="badge">
-                  <img src="https://cdn.discordapp.com/emojis/1051876319090192424.gif?size=80&quality=lossless" style="width: 20px; height: 20px;" alt="Bitcoin">
-                  <span class="badge-tooltiptext">Doxbin</span>
-                </div>
-                </div>
-<p class="text-sm">
-</em>killa.lol/$</em>
-<div class="wrapper">
-    
-						  <div class="button other" onclick="window.open('https://www.roblox.com/users/4208898809/profile', '_blank');">
-							<div class="icon">
-                <i class="fas fa-link"></i>
-							</div>
-							<span>Roblox</span>
-						  </div>
-						
-						  <div class="button discord" onclick="window.open('https://dsc.gg/ico', '_blank');">
-							<div class="icon">
-                <i class="fab fa-discord"></i>
-							</div>
-							<span>discord</span>
-						  </div>
-
-              <div class="button doxbin" onclick="window.open('https://doxbin.com/user/Z5 ', '_blank');">
-							<div class="icon">
-                <img src="https://cdn.discordapp.com/attachments/1004849202507038804/1054129127235518524/cdox.png" style="width: 60px; height: 60px;" alt="Owner">
-							</div>
-							<span>doxbin</span>
-						  </div>		
-</div>
-<div class="flex justify-center items-center space-x-2">
-<div style="text-align: center;">
-<a href="https://discord.com/users/1000022273673138226" target="_blank">
-<img src="https://discord.c99.nl/widget/theme-4/1000022273673138226.png" style="width: 300px;"></a>
-</div>
-</div>
-</div>
-</main>
-<script src="/js/page.js?id=2c4f84bac56c0ce1881f"></script>
-<script>
-
-
-function playclip() {
-if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.indexOf("MSIE 7")!=-1) || (navigator.appVersion.indexOf("MSIE 8")!=-1)) {
-if (document.all)
- {
-  document.all.sound.src = "song.mp3";
- }
-}
-
-else {
-{
-var audio = document.getElementsByTagName("audio")[0];
-audio.play();
-}
-}
-}
-
-document.querySelector('.fedslol').addEventListener('click', function() {
-  
-  playclip();
-});
-
-$(document).ready(function () {
-	$( document.body ).click(function() {
-	$(".clickanywhere").fadeOut(1000);
-    $(".biolink").fadeIn(1000);
-
-	let play = function(){document.getElementById("audio").play()}
-	
-	
-
-	
-	});
-});
-                       
-var _old = jQuery.Event.prototype.stopPropagation;
-
-jQuery.Event.prototype.stopPropagation = function() {
-    this.target.nodeName !== 'SPAN' && _old.apply( this, arguments );
-};             
-
-</script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"7903fc8098fdfd6e","token":"033c33a962e74d16be982c1223e03590","version":"2022.11.3","si":100}' crossorigin="anonymous"></script>
-</body>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="i study kotlin and play games. not a coffee enjoyer.">
+
+      <link href="https://api.fontshare.com/v2/css?f[]=general-sans@1&display=swap" rel="stylesheet">
+      <link rel="shortcut icon" href="https://api.lanyard.rest/984572181730177025.png" type="image/x-icon">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+      <link rel="stylesheet" href="https://akkih.com/style.css">
+
+      <title>akkih</title>
+  </head>
+  <body>
+      <div class="alerts"></div>
+      <div class="wrapper">
+          <div class="double-helix">
+              <div class="couple">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+              </div>
+              <div class="couple">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+              </div>
+              <div class="couple">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+              </div>
+              <div class="couple">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+              </div>
+          </div>
+          <div class="icon-container">
+              <img src="https://api.lanyard.rest/984572181730177025.png">
+          </div>
+          <h1 class="name">akkih</h1>
+          <p class="about">i study and play games<br>i'm <span class="age"></span> years old</p>
+          <div class="socials">
+              <a social="discord" data="akkih#6384" onclick="copy('akkih#6384')"><i class="fa-brands fa-discord"></i><p>Discord</p></a>
+              <a social="github" data="Akkihiko" href="https://github.com/Akkihiko" target="_blank"><i class="fa-brands fa-github"></i><p>GitHub</p></a>
+              <a social="email" data="hello@akkih.com" href="/cdn-cgi/l/email-protection#660e030a0a0926070d0d0f0e4805090b" target="_blank"><i class="fa fa-envelope"></i><p>E-mail</p></a>
+          </div>
+      </div>
+  <script data-cfasync="false" src="https://akkih.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+  <script src="https://akkih.com/script.js"></script>
 </html>
