@@ -1,95 +1,111 @@
 
 <!DOCTYPE html>
-<html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Convicted</title>
-  <script>
-  const BADGES = [
-  {
-    name: "Owner of @Killa",
-    image: "https://cdn.discordapp.com/emojis/970888425634938941.webp",
-  },
-  {
-    name: "Verified",
-    image: "https://cdn.discordapp.com/emojis/921533453160292433.webp",
-  },
-];
+<html lang="en">
 
-const USER_ID = "1000022273673138226";
-const BACKGROUND_IMAGE = src="https://i.imgur.com/HriDCVJ.gif";
-const STATUS = {
-  dnd: {
-    name: "Do not disturb",
-    color: "#ed4245",
-  },
-  idle: {
-    name: "Absent",
-    color: "#faa81a",
-  },
-  online: {
-    name: "Available",
-    color: "#3ba55d",
-  },
-  offline: {
-    name: "Offline",
-    color: "#6e7985",
-  },
-};
-</script>
-  <link rel="icon" href="https://sayanzyx.netlify.app/assets/images/icon.png"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#426098">
+    <meta name="title" content="Thereallo.dev">
+    <meta name="description" content="biolink">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convicted @ Bio</title>
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,600,700" rel="stylesheet">
+  </script>
+    :root{
+      --gradient: linear-gradient(94.47deg, #211231 30.46%, #211231 99.9%);
+  }
+  
+  body{
+      background-color: #111;
+      font-family: 'Google Sans', sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      background:url(https://media.discordapp.net/attachments/1004849202507038804/1063608629854490706/B9244D24-96C8-4450-B0AE-B2BBE6DCF79A.gif) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0;
+      
+  }
+  
+  .margin-content{
+      margin-top: 0vh;
+  }
+  
+  .gradient-txt{
+      background-image: var(--gradient);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 3rem;
+      margin-bottom: -1.2rem;
+  }
+  
+  .pfp{
+      border-radius: 10px;
+  }
+  
+  .under-txt{
+      font-size: 17px;
+  }
+  
+  .grey-link{
+      font-size: 20px;
+      padding: 3px;
+      color: rgb(199, 197, 197);
+  }
+  
+  .box{
+      background-color: rgba(0, 0, 0, 0.700);
+      padding: 80px;
+      border-radius: 10px;
+  }
+  
+  @media (max-width: 400px){
+      .box{
+          padding: 30px;
+      }
+  }
+  
+  .inf{
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+  }    
+    </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      src="https://kit.fontawesome.com/cf16def632.js"
+      crossorigin="anonymous"
+      defer
+     </script>
+  </head> 
+  <body>
+    <div class="margin-content">
+      <div class="box">
+        <img
+          class="pfp"
+          src="https://media.discordapp.net/attachments/1004849202507038804/1063608087988146236/BF3242D4-D63F-4DD3-906F-7A18FDF7A5FA.gif"
+        />
+        <h1>
+          <span class="gradient-txt">Convicted</span></h1>
+        <p class="under-txt">Owner & Developer of @ Killa.lol</p>
+        <div class="links">
+          <a
+            href="https://discord.com/users/399862294143696897"
+            class="grey-link"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
 
-  <link rel="stylesheet" href="https://sayanzyx.netlify.app/assets/css/index.css">
-  <link rel="stylesheet" href="https://sayanzyx.netlify.app/assets/css/card.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
-</head>
-<body>
-  <div id="loading">
-    <div></div>
-  </div>
-  <div id="wrapper">
-    <div id="card">
-      <div id="banner"></div>
-      <div id="user-info">
-        <div id="avatar">
-          <img src="https://cdn.discordapp.com/attachments/1004849202507038804/1063608629854490706/B9244D24-96C8-4450-B0AE-B2BBE6DCF79A.gif" alt="Convicted's Avatar">
-          <div id="status"></div>
+          <a href="https://github.com/Cxnvicted" class="grey-link"
+            ><i class="fa-brands fa-github"></i
+          ></a>
         </div>
-        <div id="badges">
-        </div>
-        <div id="username">Convicted<span>#0024</span></div>
-      </div>
-      <hr />
-      <div id="about">
-      </div>
-      <div id="social">
-        <a class="social-link" href="https://github.com/Cxnvicted" target="_blank">
-          <img src="https://cdn.discordapp.com/attachments/1068276158103306313/1069267892597686373/image.png" style="width: 60px; height: 60px;" alt="Github">
-        </a>
-          <a class="social-link" href="https://discord.gg/GA3BtE8n2a" target="_blank">
-            <img src="https://cdn.discordapp.com/attachments/1068276158103306313/1069267754252763136/image.png" style="width: 50px; height: 50px;" alt="Discord">
-        </a>
-          <a class="social-link" href="https://www.roblox.com/users/4208898809/profile" target="_blank">
-            <img src="https://cdn.discordapp.com/attachments/1068276158103306313/1069267655770505237/image.png" style="width: 40px; height: 40px;" alt="Roblox">
       </div>
     </div>
-  </div>
-
-  <footer>
-    @ <strong>Killa</strong>
-  </footer>
-
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
-  <script src="https://unpkg.com/tippy.js@6"></script>
-
-  <script src="https://sayanzyx.netlify.app/assets/js/socket.js"></script>
-  <script src="https://sayanzyx.netlify.app/assets/js/index.js"></script>
-</body>
 </html>
