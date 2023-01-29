@@ -1,328 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat');
-@import url('https://fonts.googleapis.com/css2?family=Inter');
 
-*{
-  transition: background-color 0.8s;
-  
-  --white: #F7EBE8;
-  --darkgrey: #444140;
-  --indigo: #1E1E24;
-  --red: #E54B4B;
-  --rose: #FFA987;
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convicted</title>
+  <script>
+  const BADGES = [
+  {
+    name: "Owner of @Killa",
+    image: "https://cdn.discordapp.com/emojis/970888425634938941.webp",
+  },
+  {
+    name: "Verified",
+    image: "https://cdn.discordapp.com/emojis/921533453160292433.webp",
+  },
+];
 
-  --background-primary: #181C25;
-  --background-secondary: #14171F;
-  --background-tertiary: #0C0E13;
-  --border-radius: 8px;
-}
+const USER_ID = "1000022273673138226";
+const BACKGROUND_IMAGE = src="https://cdn.discordapp.com/attachments/1062346448752095293/1069238814486298654/killabanner2.png";
+const STATUS = {
+  dnd: {
+    name: "Do not disturb",
+    color: "#ed4245",
+  },
+  idle: {
+    name: "Absent",
+    color: "#faa81a",
+  },
+  online: {
+    name: "Available",
+    color: "#3ba55d",
+  },
+  offline: {
+    name: "Offline",
+    color: "#6e7985",
+  },
+};
+</script>
+  <link rel="icon" href="https://sayanzyx.netlify.app/assets/images/icon.png"/>
 
-html {
-  background-color: var(--white);
-  color: var(--indigo);
-  text-shadow: 3px 2px 2px rgba(30, 30, 36 0.15);
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-body {
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-}
+  <link rel="stylesheet" href="https://sayanzyx.netlify.app/assets/css/index.css">
+  <link rel="stylesheet" href="https://sayanzyx.netlify.app/assets/css/card.css">
 
-body h1, body h2, body h3, body h4, body div, body ::-webkit-input-placeholder {
-  font-family: 'Inter';
-  margin: 0;
-}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+</head>
+<body>
+  <div id="loading">
+    <div></div>
+  </div>
+  <div id="wrapper">
+    <div id="card">
+      <div id="banner"></div>
+      <div id="user-info">
+        <div id="avatar">
+          <img src="https://cdn.discordapp.com/attachments/1004849202507038804/1063608629854490706/B9244D24-96C8-4450-B0AE-B2BBE6DCF79A.gif" alt="Convicted's Avatar">
+          <div id="status"></div>
+        </div>
+        <div id="badges">
+        </div>
+        <div id="username">Convicted<span>#0024</span></div>
+      </div>
+      <hr />
+      <div id="about">
+      </div>
+      <div id="social">
+        <a class="social-link" href="https://github.com/Cxnvicted" target="_blank">
+          <img src="https://cdn.discordapp.com/attachments/1068276158103306313/1069263577208336395/image.png" style="width: 50px; height: 50px;" alt="Github">
+        </a>
+          <a class="social-link" href="https://discord.gg/GA3BtE8n2a" target="_blank">
+            <img src="https://cdn.discordapp.com/attachments/1068276158103306313/1069262164780666960/image.png" style="width: 50px; height: 50px;" alt="Discord">
+          </a>
+          <a class="social-link" href="https://www.roblox.com/users/4208898809/profile" target="_blank">
+            <img src="https://cdn.discordapp.com/attachments/1068276158103306313/1069262385908568074/image.png" style="width: 50px; height: 50px;" alt="Roblox">
+      </div>
+    </div>
+  </div>
 
-body h1, body h2, body h3, body h4, body div, body :-ms-input-placeholder {
-  font-family: 'Inter';
-  margin: 0;
-}
+  <footer>
+    @ <strong>Killa</strong>
+  </footer>
 
-body h1, body h2, body h3, body h4, body div, body ::-ms-input-placeholder {
-  font-family: 'Inter';
-  margin: 0;
-}
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
 
-body h1, body h2, body h3, body h4, body div, body ::placeholder {
-  font-family: 'Inter';
-  margin: 0;
-}
-
-body a {
-  text-decoration: none;
-}
-
-body a:visited, body a:link {
-  color: unset;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
-
-body header {
-  height: 100vh;
-  color: var(--white);
-}
-
-body header > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body header > div #popout {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 400px;
-  background-color: var(--background-tertiary);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
-  -webkit-animation: left 800ms;
-          animation: left 800ms;
-}
-
-@-webkit-keyframes left {
-  0% {
-    margin-top: 200px;
-    opacity: 0;
-  }
-  100% {
-    margin-top: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes left {
-  0% {
-    margin-top: 200px;
-    opacity: 0;
-  }
-  100% {
-    margin-top: 0;
-    opacity: 1;
-  }
-}
-
-body header > div #popout .popout-header {
-  width: 100%;
-  height: 13%;
-  min-height: 140px;
-  background: url("https://cdn.discordapp.com/attachments/1062346448752095293/1069238814486298654/killabanner2.png") center/cover no-repeat;
-}
-
-body header > div #popout .popout-body {
-  position: relative;
-  margin: 0 20px;
-}
-
-body header > div #popout .popout-body .avatar {
-  position: absolute;
-  top: -60px;
-  left: 0;
-  width: 100px;
-  height: auto;
-}
-
-body header > div #popout .popout-body .avatar > :first-child {
-  width: 100%;
-  height: 100%;
-  border-radius: var(--border-radius);
-}
-
-body header > div #popout .popout-body .avatar .status {
-  position: absolute;
-  bottom: -5px;
-  right: -5px;
-  width: 25px;
-  height: 25px;
-  background: url("https://discord.c99.nl/widget/theme-4/738981890043805707.png") no-repeat;
-  background-position: -130px -129px;
-  background-size: 900px;
-  border-radius: 50%;
-  border: 3px solid var(--background-tertiary);
-}
-
-body header > div #popout .popout-body .username {
-  color: var(--text-primary);
-  margin-top: 75px;
-}
-
-body header > div #popout .popout-body #badgeList {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  top: 20px;
-  right: 0;
-}
-
-body header > div #popout .popout-body #badgeList .badge {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-}
-
-body header > div #popout .popout-body #badgeList .badge img {
-  width: 100%;
-  height: 100%;
-}
-
-body header > div #popout .popout-body #badgeList .badge:last-child {
-  margin-right: 0;
-}
-
-body header > div #popout .popout-body .about-me {
-  font-weight: lighter;
-  color: var(--text-secondary);
-  margin-top: 8px;
-}
-
-body header > div #popout .popout-body .activity {
-  position: relative;
-  margin-top: 20px;
-}
-
-body header > div #popout .popout-body .activity img {
-  width: 100%;
-  height: auto;
-}
-
-body header > div #popout .popout-footer {
-  margin: 20px;
-  margin-top: 0;
-}
-
-body header > div #popout .popout-footer input {
-  width: calc(100% - 16px);
-  height: 40px;
-  background-color: var(--background-secondary);
-  border: none;
-  padding: 10px;
-  border-radius: var(--border-radius);
-  color: var(--text-primary);
-  font-size: 0.85rem;
-}
-
-body header > div #popout .popout-footer input:focus {
-  outline: none;
-}
-
-#scroll-progress-bar{
-  position: fixed;
-  height: 0.5vw;
-  background-color: var(--red);
-}
-
-.centered{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.about-header{
-  font-size: 6vw;
-  font-weight: 400;
-}
-
-.about-desc{
-  font-size: 4vw;
-  font-weight: 400;
-  text-align: center;
-}
-
-.divider {
-  height: 4vw;
-  width: 30vw;
-  -webkit-user-drag: none;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo {
-  transform: scale(0.9);
-  transition: all 0.2s ease-in-out;
-}
-
-.logo:hover {
-  transform: scale(1);
-  cursor: pointer;
-}
-
-.image {
-  margin-left: 2vw;
-  margin-right: 2vw;
-  width: 10vw;
-}
-
-svg {
-  color: rgb(12, 14, 18);
-}
-
-@media (prefers-color-scheme: dark){
-  html {
-      background-color: var(--indigo);
-      color: var(--white);
-      text-shadow: 3px 2px 2px rgba(199, 130, 59, 0.15);
-      color-scheme: dark;
-  }
-  svg {
-      color: rgb(236, 243, 252);
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  html{
-    scroll-snap-type: none;
-  }
-  
-  #scroll-progress-bar{
-      height: 1.5vw;
-  }
-
-  .about-header{
-      font-size: 12vw;
-      font-weight: 400;
-  }
-  
-  .divider {
-      height: 8vw;
-      width: 60vw;
-  }
-
-  .about-desc {
-      font-size: 6vw;
-      font-weight: 400;
-  }
-
-  .image {
-      margin-left: 3vw;
-      margin-right: 3vw;
-      width: 14vw;
-  }
-}
+  <script src="https://sayanzyx.netlify.app/assets/js/socket.js"></script>
+  <script src="https://sayanzyx.netlify.app/assets/js/index.js"></script>
+</body>
+</html>
