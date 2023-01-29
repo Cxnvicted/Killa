@@ -7,7 +7,7 @@
   --white: #F7EBE8;
   --darkgrey: #444140;
   --indigo: #1E1E24;
-  --red: #000000;
+  --red: #E54B4B;
   --rose: #FFA987;
 
   --background-primary: #181C25;
@@ -154,7 +154,7 @@ body header > div #popout .popout-body .avatar .status {
   right: -5px;
   width: 25px;
   height: 25px;
-  background: url("") no-repeat;
+  background: url("https://discord.c99.nl/widget/theme-4/738981890043805707.png") no-repeat;
   background-position: -130px -129px;
   background-size: 900px;
   border-radius: 50%;
