@@ -1,315 +1,79 @@
 
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Convicted</title>
-      <link rel="icon" type="ico/x-icon" href="favicon.ico">
-      <meta name="theme-color" content="#010409" />
-      <meta name="description" content="Developer & Owner of @Killa.lol">
-      <meta property="og:description" content="Developer & Owner of @Killa.lol" />
-      <meta property="og:image" content="https://erdem.js.org/favicon.png" />
-      <meta property="og:url" content="https://killa.lol" />
-      <link href="https://dark.bio/static/css/page.css" rel="stylesheet" type="text/css" />
-      <meta property="og:title" content="erdem" />
-      <meta property="og:site_name" content="killa.lol" />
-      <meta property="og:type" content="website" />
-      <link rel="canonical" href="https://Killa.lol/$" />
-      <link rel="stylesheet" href="https://erdem.js.org/style.css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hackclub/css@79ee8661dfe9ab17af7d35cd8d9d7373029a8919/theme.css" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-      <link rel="preload" href="fonts/NanumPen.woff2" as="font" type="font/woff2" crossorigin>
-   </head>
-  </script>
-  <style>
-    .max-w-\[1100px\] {
-    
-      width:500px
-    }
-      </style>
-  <main style="">
-  <style>
-  
-  
-  .click_anywhere {
-  
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);	
-    
-  }
-  
-      .wrapper .button {
-          display: inline-block;
-          height: 60px;
-          width: 60px;
-          float: left;
-          margin: 0 5px;
-          overflow: hidden;
-          background: rgb(50, 50, 50);
-          border-radius: 51px;
-          cursor: pointer;
-          box-shadow: 0px 10px 10px rgb(0, 0, 0);
-          transition: all 0.3s ease-out;
-          color: black;
-      }
-  
-      .wrapper .button:hover {
-          width: 200px;
-          color: black;
-      }
-  
-      .wrapper .button .icon {
-          display: inline-block;
-          height: 60px;
-          width: 60px;
-          text-align: center;
-          border-radius: 500px;
-          box-sizing: border-box;
-          line-height: 60px;
-          transition: all 0.3s ease-out;
-      }
-  
-      .wrapper .button .icon i {
-          font-size: 25px;
-          line-height: 60px;
-          transition: all 0.3s ease-out;
-      }
-  
-      .wrapper .button:hover .icon i {
-          color: #fff;
-      }
-  
-      .wrapper .button span {
-          font-size: 20px;
-          font-weight: 500;
-          line-height: 60px;
-          margin-left: 10px;
-          transition: all 0.3s ease-out;
-          color: rgb(255, 255, 255);
-      }
-  
-      .footer p, h4, a {
-          text-align: center;
-          color: white;
-      }
-  
-  
-      /*
-      --------------------------------------------
-      */
-  
-      .wrapper .button.discord:hover .icon {
-          background: #303030;
-      }
-  
-      .wrapper .button.discord span {
-          color: #303030;
-      }
-  
-      .wrapper .button.github:hover .icon {
-          background: #303030;
-      }
-  
-      .wrapper .button.github span {
-          color: #303030;
-      }
-  
-      .wrapper .button.tiktok:hover .icon {
-          background: #303030;
-      }
-  
-      .wrapper .button.tiktok span {
-          color: #303030;
-      }
-  
-      .wrapper .button.youtube:hover .icon {
-          background: #303030;
-      }
-  
-      .wrapper .button.youtube span {
-          color: #303030;
-      }
-  
-      .wrapper .button.twitch:hover .icon {
-          background: #303030;
-      }
-  
-      .wrapper .button.twitch span {
-          color: #303030;
-      }
-  
-      .wrapper .button.twitter:hover .icon {
-          background: #303030;
-      }
-  
-      .wrapper .button.twitter span {
-          color: #303030;
-      }
-  
-      .wrapper .button.snapchat:hover .icon {
-          background: #303030;
-      }
-  
-      .wrapper .button.snapchat span {
-          color: #303030;
-      }
-  
-      .wrapper .button.steam:hover .icon {
-          background: #303030;
-      }
-  
-      .wrapper .button.steam span {
-          color: #303030;
-      }
-  
-      .wrapper .button.instagram:hover .icon {
-          background: #303030;
-      }
-  
-      .wrapper .button.instagram span {
-          color: #303030;
-      }
-  
-      .wrapper .button.facebook:hover .icon {
-          background: #4267B2;
-      }
-  
-      .wrapper .button.facebook span {
-          color: #4353ff
-      }
-  
-      .wrapper .button.spotify:hover .icon {
-          background: #303030;
-      }
-  
-      .wrapper .button.spotify span {
-          color: #303030;
-      }
-  
-      .wrapper .button.reddit:hover .icon {
-          background: #303030;
-      }
-  
-      .wrapper .button.reddit span {
-          color: #303030;
-      }
-  
-      .wrapper .button.soundcloud:hover .icon {
-          background: #303030;
-      }
-  
-      .wrapper .button.soundcloud span {
-          color: #303030;
-      }
-  
-      .wrapper .button.pinterest:hover .icon {
-          background: #303030;
-      }
-  
-      .wrapper .button.pinterest span {
-          color: #303030;
-      }
-  
-      .wrapper .button:hover .icon {
-          background: #303030;
-      }
 
-  
-      .badge {
-          position: relative;
-          display: inline-block;
-          height: 28px;
-          width: 28px;
-      }
-  
-      .badge .badge-tooltiptext {
-          visibility: hidden;
-          width: 120px;
-          background-color: #555;
-          color: #fff;
-          text-align: center;
-          border-radius: 6px;
-          padding: 5px 0;
-          position: absolute;
-          z-index: 1;
-          bottom: 125%;
-          left: 50%;
-          margin-left: -60px;
-          opacity: 0;
-          transition: opacity 0.3s;
-      }
-  
-      .badge .badge-tooltiptext::after {
-          content: "";
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          margin-left: -5px;
-          border-width: 5px;
-          border-style: solid;
-          border-color: #555 transparent transparent transparent;
-      }
-  
-      .badge:hover .badge-tooltiptext {
-          visibility: visible;
-          opacity: 1;
-      }
-  
-      .editBtn {
-          background-color: #282828;
-          background-size: cover;
-          border-radius: 7px;
-          padding: 8px;
-          color: white;
-          cursor: pointer;
-      }
-  </style>
-  <audio>
-  <source src="" type="audio/mpeg">
-  <source src="" type="audio/ogg">
-  </audio>
-  <div id="sounddiv"><bgsound id="sound"></div>
-  </div>
-  </div>
-    <body>
-      <div id="container">
-         <!-- <img id="avatar" style="border-radius: 50%;" src=""/> -->
-         <h1 class="title">Convicted</h1>
-          <p class="about">Owner & Developer of @ Killa.lol</p>       
-      </center> <div class="badge"></center>
-          </center>  <img src="https://cdn.discordapp.com/emojis/1067960946292707368.webp?size=96&quality=lossless" style="width: 20px; height: 20px;" alt="Owner"></center>
-          </center>  <span class="badge-tooltiptext">Owner</span></center>
-          </center></div></center>
-        </center><div class="badge"></center>
-          </center>  <img src="https://cdn.discordapp.com/emojis/1067960948452765777.webp?size=96&quality=lossless" style="width: 20px; height: 20px;" alt="Staff"></center>
-          </center>  <span class="badge-tooltiptext">Staff</span></center>
-          </center></div></center>
-        </center> <div class="badge"></center>
-        </center><img src="https://cdn.discordapp.com/emojis/1067960946892472342.webp?size=96&quality=lossless" style="width: 20px; height: 20px;" alt="memberid"></center>
-      </center><span class="badge-tooltiptext">ID: 2</span></center>
-          </div>
-        </div>   
-         </h3>
-         <h4 style="color: var(--snow)">
-          </center><a href="https://github.com/cxnvicted"><i class="fa-brands fa-github icons"></i></a></center>
-          </center><a href="https://discord.com/users/1000022273673138226"><i class="fa-brands fa-discord icons"></i></a></center>
-          </center><a href="https://t.me/cxnvicted"><i class="fa-brands fa-telegram icons"></i></a></center>
-         </h4>
-        </div>                  
-      </div>
-  </div>
-<div class="links">
-      
-<a class="link" href="https://discord.gg/ssKraVFH" target="_blank" style="background-color: #28292e;">
-      
-          <img src="https://dark.bio/static/assets/icons/discord.png">
-          <p style="color: #ffffff">Killa Server</p>
-      </div>
-     <script src="https://erdem.js.org/script.js"></script>
-     <div class="footer">
-			<a href="https://killa.lol">killa.lol</a>
-		</div>
-  </html>
+<head>
+    <!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+
+<link href="https://dark.bio/static/css/constants.css" rel="stylesheet" type="text/css" />
+
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dmdiakmt5/image/upload/v1674690526/assets/logo_y6alwj.png">
+
+<!-- Scripts -->
+<script src="https://kit.fontawesome.com/e2eba3834d.js" crossorigin="anonymous" type="60913c896ac48ed506ea5896-text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous" type="60913c896ac48ed506ea5896-text/javascript"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js" type="60913c896ac48ed506ea5896-text/javascript"></script>
+
+<!-- Misc -->
+    <title>Home\killa.lol</title>
+    <link href="https://dark.bio//static/css/home.css" rel="stylesheet" type="text/css" />
+    <meta name="og:title" content="killa.lol" property="og:title">
+    <meta name="og:image" content="https://res.cloudinary.com/dmdiakmt5/image/upload/v1674690526/assets/logo_y6alwj.png" property="og:image">
+    <meta name="og:description" content="Providing good service." property="og:description">
+    <meta name="theme-color" content="#2f3136" />
+</head>
+
+<body>
+
+    <div class="app">
+        <div class="main">
+            <div class="navbar">
+				<img src="https://res.cloudinary.com/dmdiakmt5/image/upload/v1674690526/assets/logo_y6alwj.png">
+				<div class="buttons">
+				</div>
+			</div>
+            <div class="bbreak"></div>
+            <div class="bbreak"></div>
+			<div class="bbreak"></div>
+			<div class="break"></div>
+            <div class="section column">
+                <div class="brand">
+                    <p class="brand-header">killa.lol</h1>
+					<p class="brand-footer">Priavte biolink service.</h3>
+                </div>
+				<div class="break"></div>
+				<div class="ad">
+					<a href="https://discord.gg/ssKraVFH">Discord</a>
+				</div>
+            </div>
+            <div class="section column" id="features">
+				<p class="stat-header">Stats</p>
+                <div class="stats">
+                    <div class="stat">
+                        <h3>Users</h3>
+                        <h4>18</h4>
+                    </div>
+                    <div class="stat">
+                        <h3>Total Views</h3>
+                        <h4>9130</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="60913c896ac48ed506ea5896-|49" defer=""></script></body>
+
+</html>
