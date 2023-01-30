@@ -9,9 +9,10 @@
       <meta name="description" content="Developer & Owner of @Killa.lol">
       <meta property="og:description" content="Developer & Owner of @Killa.lol" />
       <meta property="og:image" content="https://erdem.js.org/favicon.png" />
-      <meta property="og:url" content="https://erdem.js.org" />
+      <meta property="og:url" content="https://killa.lol" />
+      <link href="https://dark.bio/static/css/page.css" rel="stylesheet" type="text/css" />
       <meta property="og:title" content="erdem" />
-      <meta property="og:site_name" content="erdem.js.org" />
+      <meta property="og:site_name" content="killa.lol" />
       <meta property="og:type" content="website" />
       <link rel="canonical" href="https://Killa.lol/$" />
       <link rel="stylesheet" href="https://erdem.js.org/style.css" />
@@ -19,41 +20,296 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
       <link rel="preload" href="fonts/NanumPen.woff2" as="font" type="font/woff2" crossorigin>
    </head>
-   <body>
+  </script>
+  <style>
+    .max-w-\[1100px\] {
+    
+      width:500px
+    }
+      </style>
+  <main style="">
+  <style>
+  
+  
+  .click_anywhere {
+  
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);	
+    
+  }
+  
+      .wrapper .button {
+          display: inline-block;
+          height: 60px;
+          width: 60px;
+          float: left;
+          margin: 0 5px;
+          overflow: hidden;
+          background: rgb(50, 50, 50);
+          border-radius: 51px;
+          cursor: pointer;
+          box-shadow: 0px 10px 10px rgb(0, 0, 0);
+          transition: all 0.3s ease-out;
+          color: black;
+      }
+  
+      .wrapper .button:hover {
+          width: 200px;
+          color: black;
+      }
+  
+      .wrapper .button .icon {
+          display: inline-block;
+          height: 60px;
+          width: 60px;
+          text-align: center;
+          border-radius: 500px;
+          box-sizing: border-box;
+          line-height: 60px;
+          transition: all 0.3s ease-out;
+      }
+  
+      .wrapper .button .icon i {
+          font-size: 25px;
+          line-height: 60px;
+          transition: all 0.3s ease-out;
+      }
+  
+      .wrapper .button:hover .icon i {
+          color: #fff;
+      }
+  
+      .wrapper .button span {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 60px;
+          margin-left: 10px;
+          transition: all 0.3s ease-out;
+          color: rgb(255, 255, 255);
+      }
+  
+      .footer p, h4, a {
+          text-align: center;
+          color: white;
+      }
+  
+  
+      /*
+      --------------------------------------------
+      */
+  
+      .wrapper .button.discord:hover .icon {
+          background: #303030;
+      }
+  
+      .wrapper .button.discord span {
+          color: #303030;
+      }
+  
+      .wrapper .button.github:hover .icon {
+          background: #303030;
+      }
+  
+      .wrapper .button.github span {
+          color: #303030;
+      }
+  
+      .wrapper .button.tiktok:hover .icon {
+          background: #303030;
+      }
+  
+      .wrapper .button.tiktok span {
+          color: #303030;
+      }
+  
+      .wrapper .button.youtube:hover .icon {
+          background: #303030;
+      }
+  
+      .wrapper .button.youtube span {
+          color: #303030;
+      }
+  
+      .wrapper .button.twitch:hover .icon {
+          background: #303030;
+      }
+  
+      .wrapper .button.twitch span {
+          color: #303030;
+      }
+  
+      .wrapper .button.twitter:hover .icon {
+          background: #303030;
+      }
+  
+      .wrapper .button.twitter span {
+          color: #303030;
+      }
+  
+      .wrapper .button.snapchat:hover .icon {
+          background: #303030;
+      }
+  
+      .wrapper .button.snapchat span {
+          color: #303030;
+      }
+  
+      .wrapper .button.steam:hover .icon {
+          background: #303030;
+      }
+  
+      .wrapper .button.steam span {
+          color: #303030;
+      }
+  
+      .wrapper .button.instagram:hover .icon {
+          background: #303030;
+      }
+  
+      .wrapper .button.instagram span {
+          color: #303030;
+      }
+  
+      .wrapper .button.facebook:hover .icon {
+          background: #4267B2;
+      }
+  
+      .wrapper .button.facebook span {
+          color: #4353ff
+      }
+  
+      .wrapper .button.spotify:hover .icon {
+          background: #303030;
+      }
+  
+      .wrapper .button.spotify span {
+          color: #303030;
+      }
+  
+      .wrapper .button.reddit:hover .icon {
+          background: #303030;
+      }
+  
+      .wrapper .button.reddit span {
+          color: #303030;
+      }
+  
+      .wrapper .button.soundcloud:hover .icon {
+          background: #303030;
+      }
+  
+      .wrapper .button.soundcloud span {
+          color: #303030;
+      }
+  
+      .wrapper .button.pinterest:hover .icon {
+          background: #303030;
+      }
+  
+      .wrapper .button.pinterest span {
+          color: #303030;
+      }
+  
+      .wrapper .button:hover .icon {
+          background: #303030;
+      }
+
+  
+      .badge {
+          position: relative;
+          display: inline-block;
+          height: 28px;
+          width: 28px;
+      }
+  
+      .badge .badge-tooltiptext {
+          visibility: hidden;
+          width: 120px;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 125%;
+          left: 50%;
+          margin-left: -60px;
+          opacity: 0;
+          transition: opacity 0.3s;
+      }
+  
+      .badge .badge-tooltiptext::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+      }
+  
+      .badge:hover .badge-tooltiptext {
+          visibility: visible;
+          opacity: 1;
+      }
+  
+      .editBtn {
+          background-color: #282828;
+          background-size: cover;
+          border-radius: 7px;
+          padding: 8px;
+          color: white;
+          cursor: pointer;
+      }
+  </style>
+  <audio>
+  <source src="" type="audio/mpeg">
+  <source src="" type="audio/ogg">
+  </audio>
+  <div id="sounddiv"><bgsound id="sound"></div>
+  </div>
+  </div>
+    <body>
       <div id="container">
          <!-- <img id="avatar" style="border-radius: 50%;" src=""/> -->
          <h1 class="title">Convicted</h1>
-          <p class="about">Owner & Developer of @ Killa.lol</p>
+          <p class="about">Owner & Developer of @ Killa.lol</p>       
+      </center> <div class="badge"></center>
+          </center>  <img src="https://cdn.discordapp.com/emojis/1067960946292707368.webp?size=96&quality=lossless" style="width: 20px; height: 20px;" alt="Owner"></center>
+          </center>  <span class="badge-tooltiptext">Owner</span></center>
+          </center></div></center>
+        </center><div class="badge"></center>
+          </center>  <img src="https://cdn.discordapp.com/emojis/1067960948452765777.webp?size=96&quality=lossless" style="width: 20px; height: 20px;" alt="Staff"></center>
+          </center>  <span class="badge-tooltiptext">Staff</span></center>
+          </center></div></center>
+        </center> <div class="badge"></center>
+        </center><img src="https://cdn.discordapp.com/emojis/1067960946892472342.webp?size=96&quality=lossless" style="width: 20px; height: 20px;" alt="memberid"></center>
+      </center><span class="badge-tooltiptext">ID: 2</span></center>
+          </div>
+        </div>   
          </h3>
          <h4 style="color: var(--snow)">
-            <a href="https://github.com/cxnvicted"><i class="fa-brands fa-github icons"></i></a>
-            <a href="https://discord.com/users/1000022273673138226"><i class="fa-brands fa-discord icons"></i></a>
-            <a href="https://t.me/cxnvicted"><i class="fa-brands fa-telegram icons"></i></a>
+          </center><a href="https://github.com/cxnvicted"><i class="fa-brands fa-github icons"></i></a></center>
+          </center><a href="https://discord.com/users/1000022273673138226"><i class="fa-brands fa-discord icons"></i></a></center>
+          </center><a href="https://t.me/cxnvicted"><i class="fa-brands fa-telegram icons"></i></a></center>
          </h4>
-        </div>
+        </div>                  
       </div>
-    </div><center></iframe> <a target="_blank" href="https://discord.gg/ssKraVFH"><button style="border-radius: 30px" class="btn-link" type="button">Discord</button></a></center>
   </div>
-      </div>
-      <script src="https://erdem.js.org/script.js"></script>
+<div class="links">
       
-      <script type="module" crossorigin src="https://brokiem.is-a.dev/assets/index.c7625cd8.js"></script>
-    </head>
-    <body>
-        <noscript>Please allow javascript to render the page.</noscript>
-        <div id="app"></div>
-        
-    
-        <script defer src="https://www.googletagmanager.com/gtag/js?id=G-VFCLKK20J0"></script>
-        <script defer>
-            window.dataLayer = window.dataLayer || []
-    
-            function gtag() {
-                dataLayer.push(arguments)
-            }
-    
-            gtag('js', new Date())
-            gtag('config', 'G-VFCLKK20J0')
-        </script>
-    </body>
-    </html>
+<a class="link" href="https://discord.gg/ssKraVFH" target="_blank" style="background-color: #28292e;">
+      
+          <img src="https://dark.bio/static/assets/icons/discord.png">
+          <p style="color: #ffffff">Killa Server</p>
+      </div>
+     <script src="https://erdem.js.org/script.js"></script>
+     <div class="footer">
+			<a href="https://killa.lol">killa.lol</a>
+		</div>
+  </html>
